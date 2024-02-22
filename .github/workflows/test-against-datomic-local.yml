@@ -62,11 +62,11 @@ jobs:
 
       - name: Debug path
         run: |
-          cd /home/runner/work/test.regression
+          cd /home/runner/work/test.regression/test.regression
           ls -la
 #      - name: Run Local Smoke Tests
 #        run: |
-#          cd /home/runner/work/test.regression/test/regression/test-source
+#          cd /home/runner/work/test.regression/test.regression/test-source
 #          clojure -Srepro -Sdeps '{:deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_SNAPSHOT }}"}}}' -M:test-local datomic-local
 #
 #      - name: Run Pro Smoke Tests
