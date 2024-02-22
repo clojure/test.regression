@@ -63,7 +63,7 @@ jobs:
       - name: Debug path
         run: |
           cd /home/runner/work
-          ls la
+          ls -la
 #      - name: Run Local Smoke Tests
 #        run: |
 #          cd /home/runner/work/test.regression/test/regression/test-source
