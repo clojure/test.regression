@@ -1,0 +1,74 @@
+name: Test Contrib Repo
+
+on:
+
+  workflow_call:
+    inputs:
+      javaVersion:
+        description: "Java Version"
+        type: string
+        required: true
+      clojureRepo:
+        description: "Repository name with owner."
+        type: string
+        required: true
+      clojureRef:
+        description: "The branch, tag or SHA to checkout"
+        type: string
+        required: true
+      contribRepo:
+        description: "Contrib Repository name with owner."
+        type: string
+        required: true
+      contribRef:
+        description: "The branch, tag or SHA to checkout for contrib repo"
+        type: string
+        required: true
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ inputs.javaVersion }}
+
+      - name: Checkout Clojure Source Code
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.clojureRepo }}
+          ref: ${{ inputs.clojureRef }}
+          path: 'clojure-source'
+
+      - name: Build Clojure from Source
+        run: |
+          cd clojure-source
+          mvn install -Dmaven.test.skip=true
+
+      - name: Checkout Regression Test Source Code
+        uses: actions/checkout@v4
+        with:
+          repository: clojure/test.regression
+          ref: 'main'
+          path: 'test-source'
+
+      - name: Determine latest snapshot version
+        run: |
+          chmod +x ./test-source/scripts/find-installed-clojure-version.sh
+          ./test-source/scripts/find-installed-clojure-version.sh
+
+      - name: Checkout Contrib Source Code
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.contribRepo }}
+          ref: ${{ inputs.contribRef }}
+          path: 'contrib-source'
+
+      - name: Run Tests
+        run: |
+          cd /home/runner/work/test.regression/test/regression/contrib-source
+          mvn -ntp -B -Dclojure.version=${{ env.LATEST_SNAPSHOT }} clean test

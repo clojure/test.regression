@@ -1,0 +1,24 @@
+#!/bin/bash
+cd `dirname $0`/..
+
+if [ "${START_JFR}" == "true" ]; then
+    java_opts="$java_opts -XX:StartFlightRecording:${JFR_OPTS:-filename=tests.jfr,dumponexit=true}"
+fi
+
+while [ $# -gt 0 ]
+do
+    case "$1" in
+        -X*)
+            java_opts="${java_opts} $1"
+            ;;
+        -D*)
+            java_opts="${java_opts} $1"
+            ;;
+        *)
+            clojure_args="${clojure_args} $1"
+            ;;
+    esac
+    shift
+done
+
+bin/run -Dclojure.core.async.go-checking=true ${java_opts} --main datomic.tests.ci ${clojure_args}

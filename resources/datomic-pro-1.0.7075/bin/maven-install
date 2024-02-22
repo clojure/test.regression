@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Installing peer-1.0.7075" in local maven repository...
+mvn install:install-file -DgroupId=com.datomic -DartifactId=peer -Dfile=peer-1.0.7075.jar -DpomFile=pom.xml
+
+echo Installing memcache-asg-java-client-1.1.0.36.jar in local maven repository...
+mvn install:install-file -DgroupId=com.datomic -DartifactId=memcache-asg-java-client -Dfile=lib/memcache-asg-java-client-1.1.0.36.jar -Dversion=1.1.0.36 -Dpackaging=jar

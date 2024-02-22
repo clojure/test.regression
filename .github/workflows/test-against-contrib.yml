@@ -1,0 +1,108 @@
+name: Test Against Contrib
+
+on:
+  workflow_dispatch:
+    inputs:
+      javaVersion:
+        description: "Java Version"
+        required: true
+        default: '11'
+      clojureRepo:
+        description: "Repository name with owner."
+        required: true
+        default: 'clojure/clojure'
+      clojureRef:
+        description: "The branch, tag or SHA to checkout"
+        required: true
+        default: 'master'
+
+jobs:
+  test-core-cache:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/core.cache'
+      contribRef: 'master'
+
+  test-core-logic:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/core.logic'
+      contribRef: 'master'
+
+  test-core-match:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/core.match'
+      contribRef: 'master'
+
+  test-core-memoize:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/core.memoize'
+      contribRef: 'master'
+
+  test-math-combinatorics:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/math.combinatorics'
+      contribRef: 'master'
+
+  test-java-jdbc:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/java.jdbc'
+      contribRef: 'master'
+
+  test-data-xml:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/data.xml'
+      contribRef: 'master'
+
+  test-data-json:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/data.json'
+      contribRef: 'master'
+
+  test-data-fressian:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/data.fressian'
+      contribRef: 'master'
+
+  test-data-csv:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      javaVersion: ${{ inputs.javaVersion }}
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      contribRepo: 'clojure/data.csv'
+      contribRef: 'master'

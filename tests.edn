@@ -1,0 +1,4 @@
+#kaocha/v1 {:tests [{:id :datomic-local
+                     :test-paths ["test/regression/datomic_local"]}
+                    {:id :datomic-pro
+                     :test-paths ["test/regression/datomic_pro"]}]}

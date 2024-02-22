@@ -1,0 +1,73 @@
+name: Test Against Datomic
+
+on:
+  workflow_dispatch:
+    inputs:
+      javaVersion:
+        description: "Java Version"
+        required: true
+        default: '11'
+      repository:
+        description: "Repository name with owner."
+        required: true
+        default: 'clojure/clojure'
+      ref:
+        description: "The branch, tag or SHA to checkout"
+        required: true
+        default: 'master'
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ inputs.javaVersion }}
+
+      - name: Checkout Clojure Source Code
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository }}
+          ref: ${{ inputs.ref }}
+          path: 'clojure-source'
+
+      - name: Build Clojure from Source
+        run: |
+          cd clojure-source
+          mvn install -Dmaven.test.skip=true
+
+      - name: Checkout Regression Test Source Code
+        uses: actions/checkout@v4
+        with:
+          repository: clojure/test.regression
+          ref: 'main'
+          path: 'test-source'
+
+      - name: Install CLI
+        run: |
+          curl -L -O https://github.com/clojure/brew-install/releases/latest/download/posix-install.sh
+          chmod +x posix-install.sh
+          sudo ./posix-install.sh
+          clojure
+
+      - name: Determine latest snapshot version
+        run: |
+          chmod +x ./test-source/scripts/find-installed-clojure-version.sh
+          ./test-source/scripts/find-installed-clojure-version.sh
+
+      - name: Run Local Smoke Tests
+        run: |
+          cd /home/runner/work/test.regression/test/regression/test-source
+          clojure -Srepro -Sdeps '{:deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_SNAPSHOT }}"}}}' -M:test-local datomic-local
+
+      - name: Run Pro Smoke Tests
+        run: |
+          cd /home/runner/work/test.regression/test/regression/test-source/resources/datomic-pro-1.0.7075
+          bin/transactor -Ddatomic.printConnectionInfo=true config/dev-transactor-template.properties
+          cd /home/runner/work/test.regression/test/regression/test-source
+          clojure -Srepro -Sdeps '{:deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_SNAPSHOT }}"}}}' -M:test-pro datomic-pro

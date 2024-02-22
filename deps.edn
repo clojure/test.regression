@@ -1,0 +1,14 @@
+{:paths ["src" "resources"]
+
+ :deps {}
+
+ :aliases {;; ====
+           :test-pro {:extra-paths ["test"]
+                      :main-opts ["-m" "kaocha.runner"]
+                      :extra-deps {com.datomic/peer {:mvn/version "1.0.7075"}
+                                   lambdaisland/kaocha {:mvn/version "1.87.1366"}}}
+           ; -------------------------------------------------------------------
+           :test-local {:extra-paths ["test"]
+                        :main-opts ["-m" "kaocha.runner"]
+                        :extra-deps {com.datomic/local {:mvn/version "1.0.277"}
+                                     lambdaisland/kaocha {:mvn/version "1.87.1366"}}}}}
