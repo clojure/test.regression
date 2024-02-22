@@ -70,5 +70,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          cd /home/runner/work/test.regression/test/regression/contrib-source
+          cd /home/runner/work/test.regression/test.regression/contrib-source
           mvn -ntp -B -Dclojure.version=${{ env.LATEST_SNAPSHOT }} clean test
