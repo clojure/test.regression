@@ -62,11 +62,11 @@ jobs:
       - name: Run Local Smoke Tests
         run: |
           cd /home/runner/work/test.regression/test.regression/test-source
-          clojure -Srepro -Sdeps '{:deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_SNAPSHOT }}"}}}' -M:test-local datomic-local
+          clojure -Srepro -Sdeps '{:deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_CLJ_BUILD }}"}}}' -M:test-local datomic-local
 
       - name: Run Pro Smoke Tests
         run: |
           cd /home/runner/work/test.regression/test.regression/test-source/resources/datomic-pro-1.0.7075
           bin/transactor -Ddatomic.printConnectionInfo=true config/dev-transactor-template.properties &
           cd /home/runner/work/test.regression/test.regression/test-source
-          clojure -Srepro -Sdeps '{:deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_SNAPSHOT }}"}}}' -M:test-pro datomic-pro
+          clojure -Srepro -Sdeps '{:deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_CLJ_BUILD }}"}}}' -M:test-pro datomic-pro
