@@ -80,6 +80,7 @@ jobs:
 
       - name: Update project.clj with clojure build
         run: |
+          cd /home/runner/work/test.regression/test.regression/subject-source
           sed -i.bak "s/\(org.clojure\/clojure\ \"[0-9\.]*\"\)/org.clojure\/clojure \"${{ env.LATEST_CLJ_BUILD }}\"/g" project.clj
 
       - name: Run Tests
