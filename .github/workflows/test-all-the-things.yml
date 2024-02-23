@@ -18,48 +18,48 @@ jobs:
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/core.cache'
-      contribRef: 'master'
+      subjectRepo: 'clojure/core.cache'
+      subjectRef: 'master'
 
   test-core-logic:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/core.logic'
-      contribRef: 'master'
+      subjectRepo: 'clojure/core.logic'
+      subjectRef: 'master'
 
   test-core-match:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/core.match'
-      contribRef: 'master'
+      subjectRepo: 'clojure/core.match'
+      subjectRef: 'master'
 
   test-core-memoize:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/core.memoize'
-      contribRef: 'master'
+      subjectRepo: 'clojure/core.memoize'
+      subjectRef: 'master'
 
   test-math-combinatorics:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/math.combinatorics'
-      contribRef: 'master'
+      subjectRepo: 'clojure/math.combinatorics'
+      subjectRef: 'master'
 
   test-java-jdbc:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/java.jdbc'
-      contribRef: 'master'
+      subjectRepo: 'clojure/java.jdbc'
+      subjectRef: 'master'
 
 #  Fails on newer jdk lacking nashorn for cljs
 #  test-data-xml:
@@ -67,29 +67,37 @@ jobs:
 #    with:
 #      clojureRepo: ${{ inputs.clojureRepo }}
 #      clojureRef: ${{ inputs.clojureRef }}
-#      contribRepo: 'clojure/data.xml'
-#      contribRef: 'master'
+#      subjectRepo: 'clojure/data.xml'
+#      subjectRef: 'master'
 
   test-data-json:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/data.json'
-      contribRef: 'master'
+      subjectRepo: 'clojure/data.json'
+      subjectRef: 'master'
 
   test-data-fressian:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/data.fressian'
-      contribRef: 'master'
+      subjectRepo: 'clojure/data.fressian'
+      subjectRef: 'master'
 
   test-data-csv:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/data.csv'
-      contribRef: 'master'
+      subjectRepo: 'clojure/data.csv'
+      subjectRef: 'master'
+
+  test-fipp:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'brandonbloom/fipp'
+      subjectRef: 'master'
