@@ -61,13 +61,14 @@ jobs:
       contribRepo: 'clojure/java.jdbc'
       contribRef: 'master'
 
-  test-data-xml:
-    uses: ./.github/workflows/test-mvn-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      contribRepo: 'clojure/data.xml'
-      contribRef: 'master'
+#  Fails on newer jdk lacking nashorn for cljs
+#  test-data-xml:
+#    uses: ./.github/workflows/test-mvn-repo.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      contribRepo: 'clojure/data.xml'
+#      contribRef: 'master'
 
   test-data-json:
     uses: ./.github/workflows/test-mvn-repo.yml
