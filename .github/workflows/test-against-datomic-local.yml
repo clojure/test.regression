@@ -3,10 +3,6 @@ name: Test Against Datomic
 on:
   workflow_dispatch:
     inputs:
-      javaVersion:
-        description: "Java Version"
-        required: true
-        default: '11'
       repository:
         description: "Repository name with owner."
         required: true
@@ -18,7 +14,10 @@ on:
 
 jobs:
 
-  build:
+  test:
+    strategy:
+      matrix:
+        java-version: ["8", "11", "17", "21"]
 
     runs-on: ubuntu-latest
 
@@ -27,7 +26,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: ${{ inputs.javaVersion }}
+          java-version: ${{ matrix.java-version }}
 
       - name: Checkout Clojure Source Code
         uses: actions/checkout@v4

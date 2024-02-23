@@ -1,13 +1,9 @@
-name: Test Contrib Repo
+name: Test Maven Repo
 
 on:
 
   workflow_call:
     inputs:
-      javaVersion:
-        description: "Java Version"
-        type: string
-        required: true
       clojureRepo:
         description: "Repository name with owner."
         type: string
@@ -26,7 +22,10 @@ on:
         required: true
 
 jobs:
-  build:
+  test:
+    strategy:
+      matrix:
+        java-version: ["8", "11", "17", "21"]
 
     runs-on: ubuntu-latest
 
@@ -35,7 +34,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: ${{ inputs.javaVersion }}
+          java-version: ${{ matrix.java-version }}
 
       - name: Checkout Clojure Source Code
         uses: actions/checkout@v4
