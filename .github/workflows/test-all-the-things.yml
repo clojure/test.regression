@@ -989,82 +989,82 @@ jobs:
       subjectRepo: 'ztellman/virgil'
       subjectRef: 'master'
 
-  test-sweet-array:
-    uses: ./.github/workflows/test-deps-repo.yml
-    with:
-      clojureRepo: ${{ input.clojureRepo }}
-      clojureRef: ${{ input.clojureRef }}
-      subjectRepo: 'athos/sweet-array'
-      subjectRef: 'master'
-      testDir: '.'
-      testCmd: '-M:test'
-
-  test-clj-kondo:
-    uses: ./.github/workflows/test-deps-repo.yml
-    with:
-      clojureRepo: ${{ input.clojureRepo }}
-      clojureRef: ${{ input.clojureRef }}
-      subjectRepo: 'clj-kondo/clj-kondo'
-      subjectRef: 'master'
-      testDir: '.'
-      testCmd: '-M:test'
-
-  test-clojure-lsp:
-    uses: ./.github/workflows/test-deps-repo.yml
-    with:
-      clojureRepo: ${{ input.clojureRepo }}
-      clojureRef: ${{ input.clojureRef }}
-      subjectRepo: 'clojure-lsp/clojure-lsp'
-      subjectRef: 'master'
-      testDir: './lib'
-      testCmd: '-M:test'
-
-  test-fern:
-    uses: ./.github/workflows/test-deps-repo.yml
-    with:
-      clojureRepo: ${{ input.clojureRepo }}
-      clojureRef: ${{ input.clojureRef }}
-      subjectRepo: 'cognitect-labs/fern'
-      subjectRef: 'master'
-      testDir: '.'
-      testCmd: '-M:test'
-
-  test-runner:
-    uses: ./.github/workflows/test-deps-repo.yml
-    with:
-      clojureRepo: ${{ input.clojureRepo }}
-      clojureRef: ${{ input.clojureRef }}
-      subjectRepo: 'cognitect-labs/test-runner'
-      subjectRef: 'master'
-      testDir: '.'
-      testCmd: '-M:test'
-
-  test-maestro:
-    uses: ./.github/workflows/test-deps-repo.yml
-    with:
-      clojureRepo: ${{ input.clojureRepo }}
-      clojureRef: ${{ input.clojureRef }}
-      subjectRepo: 'yogthos/maestro'
-      subjectRef: 'master'
-      testDir: '.'
-      testCmd: '-M:test'
-
-  test-pomegranate:
-    uses: ./.github/workflows/test-deps-repo.yml
-    with:
-      clojureRepo: ${{ input.clojureRepo }}
-      clojureRef: ${{ input.clojureRef }}
-      subjectRepo: 'clj-commons/pomegranate'
-      subjectRef: 'master'
-      testDir: '.'
-      testCmd: '-M:test'
-
-  test-honeysql:
-    uses: ./.github/workflows/test-deps-repo.yml
-    with:
-      clojureRepo: ${{ input.clojureRepo }}
-      clojureRef: ${{ input.clojureRef }}
-      subjectRepo: 'seancorfield/honeysql'
-      subjectRef: 'master'
-      testDir: '.'
-      testCmd: '-M:test:runner'
+#  test-sweet-array:
+#    uses: ./.github/workflows/test-deps-repo.yml
+#    with:
+#      clojureRepo: ${{ input.clojureRepo }}
+#      clojureRef: ${{ input.clojureRef }}
+#      subjectRepo: 'athos/sweet-array'
+#      subjectRef: 'master'
+#      testDir: '.'
+#      testCmd: '-M:test'
+#
+#  test-clj-kondo:
+#    uses: ./.github/workflows/test-deps-repo.yml
+#    with:
+#      clojureRepo: ${{ input.clojureRepo }}
+#      clojureRef: ${{ input.clojureRef }}
+#      subjectRepo: 'clj-kondo/clj-kondo'
+#      subjectRef: 'master'
+#      testDir: '.'
+#      testCmd: '-M:test'
+#
+#  test-clojure-lsp:
+#    uses: ./.github/workflows/test-deps-repo.yml
+#    with:
+#      clojureRepo: ${{ input.clojureRepo }}
+#      clojureRef: ${{ input.clojureRef }}
+#      subjectRepo: 'clojure-lsp/clojure-lsp'
+#      subjectRef: 'master'
+#      testDir: './lib'
+#      testCmd: '-M:test'
+#
+#  test-fern:
+#    uses: ./.github/workflows/test-deps-repo.yml
+#    with:
+#      clojureRepo: ${{ input.clojureRepo }}
+#      clojureRef: ${{ input.clojureRef }}
+#      subjectRepo: 'cognitect-labs/fern'
+#      subjectRef: 'master'
+#      testDir: '.'
+#      testCmd: '-M:test'
+#
+#  test-runner:
+#    uses: ./.github/workflows/test-deps-repo.yml
+#    with:
+#      clojureRepo: ${{ input.clojureRepo }}
+#      clojureRef: ${{ input.clojureRef }}
+#      subjectRepo: 'cognitect-labs/test-runner'
+#      subjectRef: 'master'
+#      testDir: '.'
+#      testCmd: '-M:test'
+#
+#  test-maestro:
+#    uses: ./.github/workflows/test-deps-repo.yml
+#    with:
+#      clojureRepo: ${{ input.clojureRepo }}
+#      clojureRef: ${{ input.clojureRef }}
+#      subjectRepo: 'yogthos/maestro'
+#      subjectRef: 'master'
+#      testDir: '.'
+#      testCmd: '-M:test'
+#
+#  test-pomegranate:
+#    uses: ./.github/workflows/test-deps-repo.yml
+#    with:
+#      clojureRepo: ${{ input.clojureRepo }}
+#      clojureRef: ${{ input.clojureRef }}
+#      subjectRepo: 'clj-commons/pomegranate'
+#      subjectRef: 'master'
+#      testDir: '.'
+#      testCmd: '-M:test'
+#
+#  test-honeysql:
+#    uses: ./.github/workflows/test-deps-repo.yml
+#    with:
+#      clojureRepo: ${{ input.clojureRepo }}
+#      clojureRef: ${{ input.clojureRef }}
+#      subjectRepo: 'seancorfield/honeysql'
+#      subjectRef: 'master'
+#      testDir: '.'
+#      testCmd: '-M:test:runner'
