@@ -61,15 +61,6 @@ jobs:
       subjectRepo: 'clojure/java.jdbc'
       subjectRef: 'master'
 
-#  Fails on newer jdk lacking nashorn for cljs
-#  test-data-xml:
-#    uses: ./.github/workflows/test-mvn-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'clojure/data.xml'
-#      subjectRef: 'master'
-
   test-data-json:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
@@ -101,3 +92,979 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'brandonbloom/fipp'
       subjectRef: 'master'
+
+  test-dom-top:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'aphyr/dom-top'
+      subjectRef: 'master'
+
+  test-less-awful-ssl:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'aphyr/less-awful-ssl'
+      subjectRef: 'master'
+
+  test-backtick:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'brandonbloom/backtick'
+      subjectRef: 'master'
+
+  test-clj-time:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-time/clj-time'
+      subjectRef: 'master'
+
+  test-url:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      ClojureRepo: ${{ inputs.clojureRepo }}
+      ClojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'cemerick/url'
+      subjectRef: 'master'
+
+  test-enlive:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'cgrand/enlive'
+      subjectRef: 'master'
+
+  test-parsley:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'cgrand/parsley'
+      subjectRef: 'master'
+
+  test-seqexp:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'cgrand/seqexp'
+      subjectRef: 'master'
+
+  test-sjacket:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'cgrand/sjacket'
+      subjectRef: 'master'
+
+  test-balagan:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojurewerkz/balagan'
+      subjectRef: 'master'
+
+  test-buffy:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojurewerkz/buffy'
+      subjectRef: 'master'
+
+  test-chash:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'michaelklishin/chash'
+      subjectRef: 'master'
+
+  test-money:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojurewerkz/money'
+      subjectRef: 'master'
+
+  test-pantomime:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'michaelklishin/pantomime'
+      subjectRef: 'master'
+
+  test-propertied:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'michaelklishin/propertied'
+      subjectRef: 'master'
+
+  test-quartzite:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'michaelklishin/quartzite'
+      subjectRef: 'master'
+
+  test-route-one:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojurewerkz/route-one'
+      subjectRef: 'master'
+
+  test-scrypt:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojurewerkz/scrypt'
+      subjectRef: 'master'
+
+  test-serialism:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojurewerkz/serialism'
+      subjectRef: 'master'
+
+  test-support:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojurewerkz/support'
+      subjectRef: 'master'
+
+  test-validateur:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'michaelklishin/validateur'
+      subjectRef: 'master'
+
+  test-vase:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'cognitect-labs/vase'
+      subjectRef: 'master'
+
+  test-cheshire:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'dakrone/cheshire'
+      subjectRef: 'master'
+
+  test-clj-http:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'dakrone/clj-http'
+      subjectRef: 'master'
+
+  test-tigris:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'dakrone/tigris'
+      subjectRef: 'master'
+
+  test-pathetic:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'davidsantiago/pathetic'
+      subjectRef: 'master'
+
+  test-quoin:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'davidsantiago/quoin'
+      subjectRef: 'master'
+
+  test-clj-diff:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'droitfintech/clj-diff'
+      subjectRef: 'master'
+
+  test-flare:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'duckyuck/flare'
+      subjectRef: 'master'
+
+  test-core:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'duct-framework/core'
+      subjectRef: 'master'
+
+  test-instaparse:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'Engelberg/instaparse'
+      subjectRef: 'master'
+
+  test-cats:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'funcool/cats'
+      subjectRef: 'master'
+
+  test-chuck:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'gfredericks/test.chuck'
+      subjectRef: 'master'
+
+  test-bytebuffer:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'geoffsalmon/bytebuffer'
+      subjectRef: 'master'
+
+  test-alphabase:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/alphabase'
+      subjectRef: 'master'
+
+  test-blocks:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/blocks'
+      subjectRef: 'master'
+
+  test-clj-arrangement:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/clj-arrangement'
+      subjectRef: 'master'
+
+  test-clj-cbor:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/clj-cbor'
+      subjectRef: 'master'
+
+  test-clj-pgp:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/clj-pgp'
+      subjectRef: 'master'
+
+  test-cljstyle:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/cljstyle'
+      subjectRef: 'master'
+
+  test-puget:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/puget'
+      subjectRef: 'master'
+
+  test-clj-http-lite:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+       clojureRepo: ${{ input.clojureRepo }}
+       clojureRef: ${{ inputs.clojureRef }}
+       subjectRepo: 'hiredman/clj-http-lite'
+       subjectRef: 'master'
+
+  test-http-kit:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'http-kit/http-kit'
+      subjectRef: 'master'
+
+  test-aero:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'juxt/aero'
+      subjectRef: 'master'
+
+  test-bidi:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'juxt/bidi'
+      subjectRef: 'master'
+
+  test-iota:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'juxt/iota'
+      subjectRef: 'master'
+
+  test-pull:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'juxt/pull'
+      subjectRef: 'master'
+
+  test-xtdb:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'xtdb/xtdb'
+      subjectRef: 'master'
+
+  test-uniontypes:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'lambdaisland/uniontypes'
+      subjectRef: 'master'
+
+  test-jsonista:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'metosin/jsonista'
+      subjectRef: 'master'
+
+  test-muuntaja:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'metosin/muuntaja'
+      subjectRef: 'master'
+
+  test-potpuri:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+     clojureRepo: ${{ input.clojureRepo }}
+     clojureRef: ${{ inputs.clojureRef }}
+     subjectRepo: 'metosin/potpuri'
+     subjectRef: 'master'
+
+  test-ring-http-response:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'metosin/ring-http-response'
+      subjectRef: 'master'
+
+  test-schema-tools:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'metosin/schema-tools'
+      subjectRef: 'master'
+
+  test-spec-tools:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'metosin/spec-tools'
+      subjectRef: 'master'
+
+  test-clj-stacktraces:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'mmcgrana/clj-stacktrace'
+      subjectRef: 'master'
+
+  test-bencode:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'nrepl/bencode'
+      subjectRef: 'master'
+
+  test-state-flow:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'nubank/state-flow'
+      subjectRef: 'master'
+
+  test-transducers:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'pangloss/transducers'
+      subjectRef: 'master'
+
+  test-faker:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'paraseba/faker'
+      subjectRef: 'master'
+
+  test-plumbing:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'plumatic/plumbing'
+      subjectRef: 'master'
+
+  test-schema:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'plumatic/schema'
+      subjectRef: 'master'
+
+  test-schema-generators:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'plumatic/schema-generators'
+      subjectRef: 'master'
+
+  test-humane-test-output:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'pjstadig/humane-test-output'
+      subjectRef: 'master'
+
+  test-asami:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'quoll/asami'
+      subjectRef: 'master'
+
+  test-defexception:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'redplanetlabs/defexception'
+      subjectRef: 'master'
+
+  test-proxy-plus:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'redplanetlabs/proxy-plus'
+      subjectRef: 'master'
+
+  test-specter:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'redplanetlabs/specter'
+      subjectRef: 'master'
+
+  test-vector-backed-sorted-map:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'redplanetlabs/vector-backed-sorted-map'
+      subjectRef: 'master'
+
+  test-ring:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'ring-clojure/ring'
+      subjectRef: 'master'
+
+  test-ring-anti-forgery:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'ring-clojure/ring-anti-forgery'
+      subjectRef: 'master'
+
+  test-ring-codec:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'ring-clojure/ring-codec'
+      subjectRef: 'master'
+
+  test-ring-defaults:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'ring-clojure/ring-defaults'
+      subjectRef: 'master'
+
+  test-ring-headers:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'ring-clojure/ring-headers'
+      subjectRef: 'master'
+
+  test-ring-mock:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'ring-clojure/ring-mock'
+      subjectRef: 'master'
+
+  test-ring-ssl:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'ring-clojure/ring-ssl'
+      subjectRef: 'master'
+
+  test-component:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'stuartsierra/component'
+      subjectRef: 'master'
+
+  test-dependency:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'stuartsierra/dependency'
+      subjectRef: 'master'
+
+  test-encore:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'taoensso/encore'
+      subjectRef: 'master'
+
+  test-nippy:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'taoensso/nippy'
+      subjectRef: 'master'
+
+  test-tempura:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'taoensso/tempura'
+      subjectRef: 'master'
+
+  test-tengen:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'taoensso/tengen'
+      subjectRef: 'master'
+
+  test-timre:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'taoensso/timbre'
+      subjectRef: 'master'
+
+  test-touchstone:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'taoensso/touchstone'
+      subjectRef: 'master'
+
+  test-tower:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'taoensso/tower'
+      subjectRef: 'master'
+
+  test-truss:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'taoensso/truss'
+      subjectRef: 'master'
+
+  test-tufte:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'taoensso/tufte'
+      subjectRef: 'master'
+
+  test-lettercase:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: ToBeReplaced/lettercase'
+      subjectRef: 'master'
+
+  test-compact-uuids:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'tonsky/compact-uuids'
+      subjectRef: 'master'
+
+  test-tongue:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'tonsky/tongue'
+      subjectRef: 'master'
+
+  test-versioneer:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'trptcolin/versioneer'
+      subjectRef: 'master'
+
+  test-ataraxy:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/ataraxy'
+      subjectRef: 'master'
+
+  test-clout:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/clout'
+      subjectRef: 'master'
+
+  test-compojure:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/compojure'
+      subjectRef: 'master'
+
+  test-crypto-equality:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/crypto-equality'
+      subjectRef: 'master'
+
+  test-crypto-password:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/crypto-password'
+      subjectRef: 'master'
+
+  test-crypto-random:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/crypto-random'
+      subjectRef: 'master'
+
+  test-eclair:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/eclair'
+      subjectRef: 'master'
+
+  test-euclidean:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/euclidean'
+      subjectRef: 'master'
+
+  test-haslett:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/haslett'
+      subjectRef: 'master'
+
+  test-hiccup:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/hiccup'
+      subjectRef: 'master'
+
+  test-integrant:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/integrant'
+      subjectRef: 'master'
+
+  test-medley:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/medley'
+      subjectRef: 'master'
+
+  test-meta-merge:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/meta-merge'
+      subjectRef: 'master'
+
+  test-ns-tracker:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/ns-tracker'
+      subjectRef: 'master'
+
+  test-progrock:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/progrock'
+      subjectRef: 'master'
+
+  test-ring-oauth2:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/ring-oauth2'
+      subjectRef: 'master'
+
+  test-snowball-stemmer:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'weavejester/snowball-stemmer'
+      subjectRef: 'master'
+
+  test-clj-rss:
+     uses: ./.github/workflows/test-lein-repo.yml
+     with:
+       clojureRepo: ${{ input.clojureRepo }}
+       clojureRef: ${{ input.clojureRef }}
+       subjectRepo: 'yogthos/clj-rss'
+       subjectRef: 'master'
+
+  test-config:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'yogthos/config'
+      subjectRef: 'master'
+
+  test-sleight:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'ztellman/sleight'
+      subjectRef: 'master'
+
+  test-virgil:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'ztellman/virgil'
+      subjectRef: 'master'
+
+  test-sweet-array:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'athos/sweet-array'
+      subjectRef: 'master'
+      testDir: '.'
+      testCmd: '-M:test'
+
+  test-clj-kondo:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'clj-kondo/clj-kondo'
+      subjectRef: 'master'
+      testDir: '.'
+      testCmd: '-M:test'
+
+  test-clojure-lsp:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'clojure-lsp/clojure-lsp'
+      subjectRef: 'master'
+      testDir: './lib'
+      testCmd: '-M:test'
+
+  test-fern:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'cognitect-labs/fern'
+      subjectRef: 'master'
+      testDir: '.'
+      testCmd: '-M:test'
+
+  test-runner:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'cognitect-labs/test-runner'
+      subjectRef: 'master'
+      testDir: '.'
+      testCmd: '-M:test'
+
+  test-maestro:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'yogthos/maestro'
+      subjectRef: 'master'
+      testDir: '.'
+      testCmd: '-M:test'
+
+  test-pomegranate:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'clj-commons/pomegranate'
+      subjectRef: 'master'
+      testDir: '.'
+      testCmd: '-M:test'
+
+  test-honeysql:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ input.clojureRef }}
+      subjectRepo: 'seancorfield/honeysql'
+      subjectRef: 'master'
+      testDir: '.'
+      testCmd: '-M:test:runner'

@@ -1,0 +1,82 @@
+name: Test Deps Repo
+
+on:
+
+  workflow_call:
+    inputs:
+      clojureRepo:
+        description: "Repository name with owner."
+        type: string
+        required: true
+      clojureRef:
+        description: "The branch, tag or SHA to checkout"
+        type: string
+        required: true
+      subjectRepo:
+        description: "Subject Repository name with owner."
+        type: string
+        required: true
+      subjectRef:
+        description: "The branch, tag or SHA to checkout for subject repo"
+        type: string
+        required: true
+      testDir:
+        description: "Directory test invocation must be run from"
+        type: string
+        required: true
+      testCmd:
+        description: "Command to invoke test run"
+        type: string
+        required: true
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        java-version: ["8", "11", "17", "21"]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java-version }}
+
+      - name: Checkout Clojure Source Code
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.clojureRepo }}
+          ref: ${{ inputs.clojureRef }}
+          path: 'clojure-source'
+
+      - name: Build Clojure from Source
+        run: |
+          cd clojure-source
+          mvn install -Dmaven.test.skip=true
+
+      - name: Checkout Regression Test Source Code
+        uses: actions/checkout@v4
+        with:
+          repository: clojure/test.regression
+          ref: 'main'
+          path: 'test-source'
+
+      - name: Determine latest snapshot version
+        run: |
+          chmod +x ./test-source/scripts/find-installed-clojure-version.sh
+          ./test-source/scripts/find-installed-clojure-version.sh
+
+      - name: Checkout Subject Source Code
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.subjectRepo }}
+          ref: ${{ inputs.subjectRef }}
+          path: 'subject-source'
+
+      - name: Run Tests
+        run: |
+          cd /home/runner/work/test.regression/test.regression/subject-source
+          cd ${{ inputs.testDir }}
+          clojure -Srepro -Sdeps '{:deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_CLJ_BUILD }}"}}}' ${{ inputs.testCmd }}
