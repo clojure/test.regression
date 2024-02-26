@@ -255,14 +255,6 @@ jobs:
 ##      subjectRepo: 'dakrone/cheshire'
 ##      subjectRef: 'master'
 
-  test-clj-http:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'dakrone/clj-http'
-      subjectRef: 'master'
-
   test-tigris:
     uses: ./.github/workflows/test-lein-repo.yml
     with:
