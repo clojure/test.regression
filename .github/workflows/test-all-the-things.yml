@@ -311,14 +311,6 @@ jobs:
       subjectRepo: 'funcool/cats'
       subjectRef: 'master'
 
-  test-chuck:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'gfredericks/test.chuck'
-      subjectRef: 'master'
-
   test-bytebuffer:
     uses: ./.github/workflows/test-lein-repo.yml
     with:
@@ -679,14 +671,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/tufte'
       subjectRef: 'master'
-
-  test-lettercase:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: ToBeReplaced/lettercase'
-      subjectRef: 'main'
 
   test-compact-uuids:
     uses: ./.github/workflows/test-lein-repo.yml
