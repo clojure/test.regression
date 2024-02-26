@@ -480,14 +480,6 @@ jobs:
       subjectRepo: 'nubank/state-flow'
       subjectRef: 'master'
 
-  test-transducers:
-    uses: ./.github/workflows/test-deps-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'pangloss/transducers'
-      subjectRef: 'master'
-
   test-faker:
     uses: ./.github/workflows/test-lein-repo.yml
     with:
