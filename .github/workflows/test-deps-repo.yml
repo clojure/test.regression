@@ -63,6 +63,13 @@ jobs:
           ref: 'main'
           path: 'test-source'
 
+      - name: Install CLI
+        run: |
+          curl -L -O https://github.com/clojure/brew-install/releases/latest/download/posix-install.sh
+          chmod +x posix-install.sh
+          sudo ./posix-install.sh
+          clojure
+
       - name: Determine latest snapshot version
         run: |
           chmod +x ./test-source/scripts/find-installed-clojure-version.sh
