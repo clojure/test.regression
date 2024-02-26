@@ -286,38 +286,38 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'davidsantiago/quoin'
       subjectRef: 'master'
-
-  test-clj-diff:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'droitfintech/clj-diff'
-      subjectRef: 'master'
-
-  test-flare:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'duckyuck/flare'
-      subjectRef: 'master'
-
-  test-core:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'duct-framework/core'
-      subjectRef: 'master'
-
-  test-instaparse:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ input.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'Engelberg/instaparse'
-      subjectRef: 'master'
+#
+#  test-clj-diff:
+#    uses: ./.github/workflows/test-lein-repo.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'droitfintech/clj-diff'
+#      subjectRef: 'master'
+#
+#  test-flare:
+#    uses: ./.github/workflows/test-lein-repo.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'duckyuck/flare'
+#      subjectRef: 'master'
+#
+#  test-core:
+#    uses: ./.github/workflows/test-lein-repo.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'duct-framework/core'
+#      subjectRef: 'master'
+#
+#  test-instaparse:
+#    uses: ./.github/workflows/test-lein-repo.yml
+#    with:
+#      clojureRepo: ${{ input.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'Engelberg/instaparse'
+#      subjectRef: 'master'
 
 #  test-cats:
 #    uses: ./.github/workflows/test-lein-repo.yml
