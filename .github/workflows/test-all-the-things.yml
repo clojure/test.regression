@@ -181,13 +181,14 @@ jobs:
 #      subjectRepo: 'michaelklishin/chash'
 #      subjectRef: 'master'
 
-  test-money:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojurewerkz/money'
-      subjectRef: 'main'
+##  FAILS on Java 8
+##  test-money:
+##    uses: ./.github/workflows/test-lein-repo.yml
+##    with:
+##      clojureRepo: ${{ inputs.clojureRepo }}
+##      clojureRef: ${{ inputs.clojureRef }}
+##      subjectRepo: 'clojurewerkz/money'
+##      subjectRef: 'main'
 
   test-propertied:
     uses: ./.github/workflows/test-lein-repo.yml
@@ -203,7 +204,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'michaelklishin/quartzite'
-      subjectRef: 'master'
+      subjectRef: 'main'
 
   test-route-one:
     uses: ./.github/workflows/test-lein-repo.yml
@@ -245,86 +246,79 @@ jobs:
       subjectRepo: 'michaelklishin/validateur'
       subjectRef: 'master'
 
-  test-vase:
+## FAILS on java 21
+##  test-cheshire:
+##    uses: ./.github/workflows/test-lein-repo.yml
+##    with:
+##      clojureRepo: ${{ inputs.clojureRepo }}
+##      clojureRef: ${{ inputs.clojureRef }}
+##      subjectRepo: 'dakrone/cheshire'
+##      subjectRef: 'master'
+
+  test-clj-http:
     uses: ./.github/workflows/test-lein-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'cognitect-labs/vase'
+      subjectRepo: 'dakrone/clj-http'
       subjectRef: 'master'
 
-  test-cheshire:
+  test-tigris:
     uses: ./.github/workflows/test-lein-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'dakrone/cheshire'
+      subjectRepo: 'dakrone/tigris'
       subjectRef: 'master'
 
-#  test-clj-http:
-#    uses: ./.github/workflows/test-lein-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'dakrone/clj-http'
-#      subjectRef: 'master'
-#
-#  test-tigris:
-#    uses: ./.github/workflows/test-lein-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'dakrone/tigris'
-#      subjectRef: 'master'
-#
-#  test-pathetic:
-#    uses: ./.github/workflows/test-lein-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'davidsantiago/pathetic'
-#      subjectRef: 'master'
-#
-#  test-quoin:
-#    uses: ./.github/workflows/test-lein-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'davidsantiago/quoin'
-#      subjectRef: 'master'
-#
-#  test-clj-diff:
-#    uses: ./.github/workflows/test-lein-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'droitfintech/clj-diff'
-#      subjectRef: 'master'
-#
-#  test-flare:
-#    uses: ./.github/workflows/test-lein-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'duckyuck/flare'
-#      subjectRef: 'master'
-#
-#  test-core:
-#    uses: ./.github/workflows/test-lein-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'duct-framework/core'
-#      subjectRef: 'master'
-#
-#  test-instaparse:
-#    uses: ./.github/workflows/test-lein-repo.yml
-#    with:
-#      clojureRepo: ${{ input.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'Engelberg/instaparse'
-#      subjectRef: 'master'
-#
+  test-pathetic:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'davidsantiago/pathetic'
+      subjectRef: 'master'
+
+  test-quoin:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'davidsantiago/quoin'
+      subjectRef: 'master'
+
+  test-clj-diff:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'droitfintech/clj-diff'
+      subjectRef: 'master'
+
+  test-flare:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'duckyuck/flare'
+      subjectRef: 'master'
+
+  test-core:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'duct-framework/core'
+      subjectRef: 'master'
+
+  test-instaparse:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ input.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'Engelberg/instaparse'
+      subjectRef: 'master'
+
 #  test-cats:
 #    uses: ./.github/workflows/test-lein-repo.yml
 #    with:
