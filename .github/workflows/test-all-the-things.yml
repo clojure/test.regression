@@ -333,7 +333,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/alphabase'
-      subjectRef: 'master'
+      subjectRef: 'main'
 
   test-blocks:
     uses: ./.github/workflows/test-lein-repo.yml
@@ -349,7 +349,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/clj-arrangement'
-      subjectRef: 'master'
+      subjectRef: 'main'
 
   test-clj-cbor:
     uses: ./.github/workflows/test-lein-repo.yml
@@ -357,7 +357,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/clj-cbor'
-      subjectRef: 'master'
+      subjectRef: 'main'
 
   test-clj-pgp:
     uses: ./.github/workflows/test-lein-repo.yml
@@ -365,7 +365,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/clj-pgp'
-      subjectRef: 'master'
+      subjectRef: 'main'
 
   test-cljstyle:
     uses: ./.github/workflows/test-lein-repo.yml
@@ -373,7 +373,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/cljstyle'
-      subjectRef: 'master'
+      subjectRef: 'main'
 
   test-puget:
     uses: ./.github/workflows/test-lein-repo.yml
@@ -381,22 +381,6 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/puget'
-      subjectRef: 'master'
-
-  test-clj-http-lite:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-       clojureRepo: ${{ inputs.clojureRepo }}
-       clojureRef: ${{ inputs.clojureRef }}
-       subjectRepo: 'hiredman/clj-http-lite'
-       subjectRef: 'master'
-
-  test-http-kit:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'http-kit/http-kit'
       subjectRef: 'master'
 
   test-aero:
@@ -453,14 +437,6 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'metosin/jsonista'
-      subjectRef: 'master'
-
-  test-muuntaja:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'metosin/muuntaja'
       subjectRef: 'master'
 
   test-potpuri:
