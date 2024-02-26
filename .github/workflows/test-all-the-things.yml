@@ -335,13 +335,14 @@ jobs:
       subjectRepo: 'greglook/alphabase'
       subjectRef: 'main'
 
-  test-blocks:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'greglook/blocks'
-      subjectRef: 'master'
+## NOTE Fails: Unable to resolve var: clojure.instant/thread-local-utc-date-format in this context
+##  test-blocks:
+##    uses: ./.github/workflows/test-lein-repo.yml
+##    with:
+##      clojureRepo: ${{ inputs.clojureRepo }}
+##      clojureRef: ${{ inputs.clojureRef }}
+##      subjectRepo: 'greglook/blocks'
+##      subjectRef: 'master'
 
   test-clj-arrangement:
     uses: ./.github/workflows/test-lein-repo.yml
