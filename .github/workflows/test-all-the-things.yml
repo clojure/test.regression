@@ -632,14 +632,6 @@ jobs:
       subjectRepo: 'taoensso/tengen'
       subjectRef: 'master'
 
-  test-timre:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'taoensso/timbre'
-      subjectRef: 'master'
-
   test-touchstone:
     uses: ./.github/workflows/test-lein-repo.yml
     with:
