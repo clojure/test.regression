@@ -327,15 +327,6 @@ jobs:
       subjectRepo: 'greglook/alphabase'
       subjectRef: 'main'
 
-## NOTE Fails: Unable to resolve var: clojure.instant/thread-local-utc-date-format in this context
-##  test-blocks:
-##    uses: ./.github/workflows/test-lein-repo.yml
-##    with:
-##      clojureRepo: ${{ inputs.clojureRepo }}
-##      clojureRef: ${{ inputs.clojureRef }}
-##      subjectRepo: 'greglook/blocks'
-##      subjectRef: 'master'
-
   test-clj-arrangement:
     uses: ./.github/workflows/test-lein-repo.yml
     with:
@@ -848,15 +839,6 @@ jobs:
       subjectRepo: 'ztellman/sleight'
       subjectRef: 'master'
 
-# NOTE java.lang.IllegalArgumentException: No matching method sleep found taking 1 args
-#  test-virgil:
-#    uses: ./.github/workflows/test-lein-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'ztellman/virgil'
-#      subjectRef: 'master'
-
   test-clojure-lsp:
     uses: ./.github/workflows/test-deps-repo.yml
     with:
@@ -866,17 +848,6 @@ jobs:
       subjectRef: 'master'
       testDir: './lib'
       testCmd: '-M:test'
-
-  # NOTE Unable to resolve var: clojure.instant/thread-local-utc-date-format in this context
-#  test-fern:
-#    uses: ./.github/workflows/test-deps-repo.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'conitect-labs/fern'
-#      subjectRef: 'master'
-#      testDir: '.'
-#      testCmd: '-M:test'
 
   test-runner:
     uses: ./.github/workflows/test-deps-repo.yml
