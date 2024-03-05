@@ -198,13 +198,14 @@ jobs:
       subjectRepo: 'michaelklishin/propertied'
       subjectRef: 'master'
 
-  test-quartzite:
-    uses: ./.github/workflows/test-lein-repo.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'michaelklishin/quartzite'
-      subjectRef: 'main'
+# NOTE: Failing hardcoded date based test.
+#  test-quartzite:
+#    uses: ./.github/workflows/test-lein-repo.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'michaelklishin/quartzite'
+#      subjectRef: 'main'
 
   test-route-one:
     uses: ./.github/workflows/test-lein-repo.yml
