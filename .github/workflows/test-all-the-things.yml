@@ -889,3 +889,11 @@ jobs:
       subjectRef: 'master'
       testDir: '.'
       testCmd: '-M:test:runner'
+
+  test-nippy:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'taoensso/nippy'
+      subjectRef: 'master'
