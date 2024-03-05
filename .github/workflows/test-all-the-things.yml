@@ -897,3 +897,13 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/nippy'
       subjectRef: 'master'
+
+  test-scicloj-ml:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'scicloj/scicloj.ml'
+      subjectRef: 'master'
+      testDir: '.'
+      testCmd: '-M:test-runner'
