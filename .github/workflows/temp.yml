@@ -19,4 +19,4 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'michaelklishin/quartzite'
-      subjectRef: 'main'
+      subjectRef: '2e59105cc6ed8772b9f153e8bbd1f4c3145e3915'
