@@ -1,0 +1,22 @@
+name: Temp
+
+on:
+  workflow_dispatch:
+    inputs:
+      clojureRepo:
+        description: "Repository name with owner."
+        required: true
+        default: 'clojure/clojure'
+      clojureRef:
+        description: "The branch, tag or SHA to checkout"
+        required: true
+        default: 'master'
+
+jobs:
+  test-quartzite:
+    uses: ./.github/workflows/test-lein-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'michaelklishin/quartzite'
+      subjectRef: 'main'
