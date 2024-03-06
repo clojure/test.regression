@@ -904,6 +904,6 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'scicloj/scicloj.ml'
-      subjectRef: 'master'
+      subjectRef: 'main'
       testDir: '.'
       testCmd: '-M:test-runner'
