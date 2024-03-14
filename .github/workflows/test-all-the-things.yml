@@ -846,7 +846,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojure-lsp/clojure-lsp'
-      subjectRef: 'master'
+      subjectRef: '85fb38b42e3e3dc5ae608adde6c882a536faf41a'
       testDir: './lib'
       testCmd: '-M:test'
 
