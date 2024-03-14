@@ -13,3 +13,4 @@ Required inputs for all actions are the same.
 * [test-against-datomic](https://github.com/clojure/test.regression/actions/workflows/test-against-datomic.yml): Runtime ~4 min. Runs basic smoke test against datomic-local and datomic-pro
 * [test-against-contrib-and-nu](https://github.com/clojure/test.regression/actions/workflows/test-against-contrib-and-nu.yml): Runtime ~4 min. Run tests in contrib repos and open source Nubank repos
 * [test-all-the-things](https://github.com/clojure/test.regression/actions/workflows/test-all-the-things.yml): Runtime ~30 min. Run test in over one hundred community repositories.
+* [test-pinned-repos](https://github.com/clojure/test.regression/actions/workflows/test-pinned-repos.yml): Runtime ~4 min. Run tests against repositories that require pinned SHAs.

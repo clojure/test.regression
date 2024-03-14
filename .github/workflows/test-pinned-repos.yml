@@ -1,0 +1,25 @@
+name: Test Pinned Repos
+
+on:
+  workflow_dispatch:
+    inputs:
+      clojureRepo:
+        description: "Repository name with owner."
+        required: true
+        default: 'clojure/clojure'
+      clojureRef:
+        description: "The branch, tag or SHA to checkout"
+        required: true
+        default: 'master'
+
+jobs:
+  test-clojure-lsp:
+    uses: ./.github/workflows/test-deps-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure-lsp/clojure-lsp'
+      subjectRef: '85fb38b42e3e3dc5ae608adde6c882a536faf41a'
+      testDir: './lib'
+      testCmd: '-M:test'
+
