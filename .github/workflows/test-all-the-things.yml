@@ -390,7 +390,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'xtdb/xtdb'
-      subjectRef: 'master'
+      subjectRef: 'main'
 
   test-uniontypes:
     uses: ./.github/workflows/test-lein-repo.yml
