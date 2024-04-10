@@ -21,4 +21,4 @@ jobs:
       subjectRepo: 'scicloj/metamorph'
       subjectRef: 'master'
       testDir: ''
-      testCmd: '-M:test'
+      testCmd: '-M:run-tests'
