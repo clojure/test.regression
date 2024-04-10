@@ -20,5 +20,5 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'scicloj/metamorph.ml'
       subjectRef: 'main'
-      testDir: ''
+      testDir: '.'
       testCmd: 'bin/kaocha unit'
