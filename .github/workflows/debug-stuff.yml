@@ -18,7 +18,7 @@ jobs:
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'scicloj/metamorph'
+      subjectRepo: 'scicloj/metamorph.ml'
       subjectRef: 'master'
       testDir: ''
-      testCmd: '-M:run-tests'
+      testCmd: 'bin/kaocha unit'
