@@ -14,9 +14,9 @@ on:
 
 jobs:
   test-xtdb:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/test-deps-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'xtdb/xtdb'
-      subjectRef: '1.x'
+      subjectRepo: 'scicloj/metamorph'
+      subjectRef: 'master'
