@@ -13,12 +13,12 @@ on:
         default: 'master'
 
 jobs:
-  test-xtdb:
+  test-debug:
     uses: ./.github/workflows/test-deps-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'scicloj/metamorph.ml'
-      subjectRef: 'master'
+      subjectRef: 'main'
       testDir: ''
       testCmd: 'bin/kaocha unit'
