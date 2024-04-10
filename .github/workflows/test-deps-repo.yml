@@ -29,7 +29,7 @@ on:
         type: string
         required: true
       javaVersion:
-        description: 'Java version to use for the build'
+        description: 'Java matrix versions to use for the build'
         required: false
         default: '["8", "11", "17", "21"]'
         type: string
