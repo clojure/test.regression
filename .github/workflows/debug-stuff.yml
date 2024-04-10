@@ -20,3 +20,4 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'scicloj/metamorph'
       subjectRef: 'master'
+      testCmd: '-M:test'
