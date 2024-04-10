@@ -28,12 +28,17 @@ on:
         description: "Command to invoke test run"
         type: string
         required: true
+      javaVersion:
+        description: 'Java version to use for the build'
+        required: false
+        default: '["8", "11", "17", "21"]'
+        type: string
 
 jobs:
   test:
     strategy:
       matrix:
-        java-version: ["8", "11", "17", "21"]
+        java-version: ${{ fromJson(inputs.javaVersion) }}
 
     runs-on: ubuntu-latest
 

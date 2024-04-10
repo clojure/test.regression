@@ -22,3 +22,4 @@ jobs:
       subjectRef: 'main'
       testDir: '.'
       testCmd: '-A:test -m kaocha.runner'
+      javaVersion: '["11", "17", "21"]'
