@@ -21,4 +21,4 @@ jobs:
       subjectRepo: 'scicloj/metamorph.ml'
       subjectRef: 'main'
       testDir: '.'
-      testCmd: 'bin/kaocha unit'
+      testCmd: '-A:test -m kaocha.runner'
