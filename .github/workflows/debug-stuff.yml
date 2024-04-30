@@ -13,13 +13,10 @@ on:
         default: 'master'
 
 jobs:
-  test-debug:
-    uses: ./.github/workflows/test-deps-repo.yml
+  test-transit-clj:
+    uses: ./.github/workflows/test-mvn-repo.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'scicloj/metamorph.ml'
-      subjectRef: 'main'
-      testDir: '.'
-      testCmd: '-A:test -m kaocha.runner'
-      javaVersion: '["11", "17", "21"]'
+      subjectRepo: 'cognitect/transit-clj'
+      subjectRef: 'master'
