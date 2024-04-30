@@ -61,6 +61,14 @@ jobs:
       subjectRepo: 'clojure/java.jdbc'
       subjectRef: 'master'
 
+  test-transit-clj:
+    uses: ./.github/workflows/test-mvn-repo.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'cognitect/transit-clj'
+      subjectRef: 'master'
+
   test-data-json:
     uses: ./.github/workflows/test-mvn-repo.yml
     with:
