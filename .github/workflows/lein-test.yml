@@ -1,4 +1,4 @@
-name: Test Lein Repo
+name: Action for lein repo test
 
 on:
 

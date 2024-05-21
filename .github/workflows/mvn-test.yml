@@ -1,4 +1,4 @@
-name: Test Maven Repo
+name: Action for Maven repo test
 
 on:
 
