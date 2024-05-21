@@ -13,6 +13,23 @@ on:
         default: 'master'
 
 jobs:
+
+  test-algo-generic:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/algo.generic'
+      subjectRef: 'master'
+
+  test-algo-monads:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/algo.monads'
+      subjectRef: 'master'
+  
   test-core-cache:
     uses: ./.github/workflows/mvn-test.yml
     with:
@@ -45,28 +62,28 @@ jobs:
       subjectRepo: 'clojure/core.memoize'
       subjectRef: 'master'
 
-  test-math-combinatorics:
+  test-core-rrb-vector:
     uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/math.combinatorics'
+      subjectRepo: 'clojure/core.rrb-vector'
       subjectRef: 'master'
 
-  test-java-jdbc:
+  test-data-avl:
     uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/java.jdbc'
+      subjectRepo: 'clojure/core.data.avl'
       subjectRef: 'master'
 
-  test-data-json:
+  test-data-csv:
     uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/data.json'
+      subjectRepo: 'clojure/data.csv'
       subjectRef: 'master'
 
   test-data-fressian:
@@ -77,10 +94,194 @@ jobs:
       subjectRepo: 'clojure/data.fressian'
       subjectRef: 'master'
 
-  test-data-csv:
+  test-data-generators:
     uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/data.csv'
+      subjectRepo: 'clojure/data.generators'
+      subjectRef: 'master'
+
+  test-data-int-map:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/data.int-map'
+      subjectRef: 'master'
+
+  test-data-json:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/data.json'
+      subjectRef: 'master'
+
+  test-data-priority-map:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/data.priority-map'
+      subjectRef: 'master'
+
+  test-data-xml:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/data.xml'
+      subjectRef: 'master'
+
+  test-data-zip:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/data.zip'
+      subjectRef: 'master'
+
+  test-java-classpath:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/java.classpath'
+      subjectRef: 'master'
+
+  test-java-data:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/java.data'
+      subjectRef: 'master'
+
+  test-java-jmx:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/java.jmx'
+      subjectRef: 'master'
+
+  test-math-combinatorics:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/math.combinatorics'
+      subjectRef: 'master'
+
+  test-math-numeric-tower:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/math.numeric-tower'
+      subjectRef: 'master'
+
+  test-test-check:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/test.check'
+      subjectRef: 'master'
+
+  test-test-generative:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/test.generative'
+      subjectRef: 'master'
+
+  test-tools-analyzer:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.analyzer'
+      subjectRef: 'master'
+
+  test-tools-analyzer-jvm:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.analyzer.jvm'
+      subjectRef: 'master'
+
+  test-tools-build:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.build'
+      subjectRef: 'master'
+
+  test-tools-cli:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.cli'
+      subjectRef: 'master'
+
+  test-tools-deps:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.deps'
+      subjectRef: 'master'
+
+  test-tools-deps-cli:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.deps.cli'
+      subjectRef: 'master'
+
+  test-tools-gitlibs:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.gitlibs'
+      subjectRef: 'master'
+
+  test-tools-logging:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.logging'
+      subjectRef: 'master'
+
+  test-tools-macro:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.macro'
+      subjectRef: 'master'
+
+  test-tools-reader:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.reader'
+      subjectRef: 'master'
+
+  test-tools-trace:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.trace'
       subjectRef: 'master'
