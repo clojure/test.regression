@@ -906,3 +906,21 @@ jobs:
       testDir: '.'
       testCmd: '-A:test -m kaocha.runner'
       javaVersion: '["11", "17", "21"]'
+
+  test-state-flow:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'nubank/state-flow'
+      subjectRef: 'master'
+
+  test-clojure-lsp:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure-lsp/clojure-lsp'
+      subjectRef: 'master'
+      testDir: './lib'
+      testCmd: '-M:test'

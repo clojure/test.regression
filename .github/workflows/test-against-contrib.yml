@@ -1,4 +1,4 @@
-name: Test Against Contrib and Nu
+name: Test Against Contrib
 
 on:
   workflow_dispatch:
@@ -84,21 +84,3 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojure/data.csv'
       subjectRef: 'master'
-
-  test-state-flow:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'nubank/state-flow'
-      subjectRef: 'master'
-
-  test-clojure-lsp:
-    uses: ./.github/workflows/deps-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure-lsp/clojure-lsp'
-      subjectRef: 'master'
-      testDir: './lib'
-      testCmd: '-M:test'
