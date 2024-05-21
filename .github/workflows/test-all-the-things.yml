@@ -14,7 +14,7 @@ on:
 
 jobs:
   test-core-cache:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -22,7 +22,7 @@ jobs:
       subjectRef: 'master'
 
   test-core-logic:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -30,7 +30,7 @@ jobs:
       subjectRef: 'master'
 
   test-core-match:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -38,7 +38,7 @@ jobs:
       subjectRef: 'master'
 
   test-core-memoize:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -46,7 +46,7 @@ jobs:
       subjectRef: 'master'
 
   test-math-combinatorics:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -54,7 +54,7 @@ jobs:
       subjectRef: 'master'
 
   test-java-jdbc:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -62,7 +62,7 @@ jobs:
       subjectRef: 'master'
 
   test-transit-clj:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -70,7 +70,7 @@ jobs:
       subjectRef: 'master'
 
   test-data-json:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -78,7 +78,7 @@ jobs:
       subjectRef: 'master'
 
   test-data-fressian:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -86,7 +86,7 @@ jobs:
       subjectRef: 'master'
 
   test-data-csv:
-    uses: ./.github/workflows/test-mvn-repo.yml
+    uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -94,7 +94,7 @@ jobs:
       subjectRef: 'master'
 
   test-fipp:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -102,7 +102,7 @@ jobs:
       subjectRef: 'master'
 
   test-less-awful-ssl:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -110,7 +110,7 @@ jobs:
       subjectRef: 'master'
 
   test-backtick:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -118,7 +118,7 @@ jobs:
       subjectRef: 'master'
 
   test-clj-time:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -126,7 +126,7 @@ jobs:
       subjectRef: 'master'
 
   test-url:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       ClojureRepo: ${{ inputs.clojureRepo }}
       ClojureRef: ${{ inputs.clojureRef }}
@@ -134,7 +134,7 @@ jobs:
       subjectRef: 'master'
 
   test-enlive:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -142,7 +142,7 @@ jobs:
       subjectRef: 'master'
 
   test-parsley:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -150,7 +150,7 @@ jobs:
       subjectRef: 'master'
 
   test-seqexp:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -158,7 +158,7 @@ jobs:
       subjectRef: 'master'
 
   test-sjacket:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -166,7 +166,7 @@ jobs:
       subjectRef: 'master'
 
   test-balagan:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -174,7 +174,7 @@ jobs:
       subjectRef: 'master'
 
   test-buffy:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -182,7 +182,7 @@ jobs:
       subjectRef: 'master'
 
   test-chash:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -191,7 +191,7 @@ jobs:
 
 #  FAILS on Java 8
 #  test-money:
-#    uses: ./.github/workflows/test-lein-repo.yml
+#    uses: ./.github/workflows/lein-test.yml
 #    with:
 #      clojureRepo: ${{ inputs.clojureRepo }}
 #      clojureRef: ${{ inputs.clojureRef }}
@@ -199,7 +199,7 @@ jobs:
 #      subjectRef: 'main'
 
   test-propertied:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -208,7 +208,7 @@ jobs:
 
 # NOTE: Failing hardcoded date based test.
 #  test-quartzite:
-#    uses: ./.github/workflows/test-lein-repo.yml
+#    uses: ./.github/workflows/lein-test.yml
 #    with:
 #      clojureRepo: ${{ inputs.clojureRepo }}
 #      clojureRef: ${{ inputs.clojureRef }}
@@ -216,7 +216,7 @@ jobs:
 #      subjectRef: 'main'
 
   test-route-one:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -224,7 +224,7 @@ jobs:
       subjectRef: 'master'
 
   test-scrypt:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -232,7 +232,7 @@ jobs:
       subjectRef: 'master'
 
   test-serialism:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -240,7 +240,7 @@ jobs:
       subjectRef: 'master'
 
   test-support:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -248,7 +248,7 @@ jobs:
       subjectRef: 'master'
 
   test-validateur:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -257,7 +257,7 @@ jobs:
 
 # FAILS on java 21
 #  test-cheshire:
-#    uses: ./.github/workflows/test-lein-repo.yml
+#    uses: ./.github/workflows/lein-test.yml
 #    with:
 #      clojureRepo: ${{ inputs.clojureRepo }}
 #      clojureRef: ${{ inputs.clojureRef }}
@@ -265,7 +265,7 @@ jobs:
 #      subjectRef: 'master'
 
   test-tigris:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -273,7 +273,7 @@ jobs:
       subjectRef: 'master'
 
   test-pathetic:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -281,7 +281,7 @@ jobs:
       subjectRef: 'master'
 
   test-quoin:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -289,7 +289,7 @@ jobs:
       subjectRef: 'master'
 
   test-clj-diff:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -297,7 +297,7 @@ jobs:
       subjectRef: 'master'
 
   test-flare:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -305,7 +305,7 @@ jobs:
       subjectRef: 'master'
 
   test-instaparse:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -313,7 +313,7 @@ jobs:
       subjectRef: 'master'
 
   test-cats:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -321,7 +321,7 @@ jobs:
       subjectRef: 'master'
 
   test-bytebuffer:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -329,7 +329,7 @@ jobs:
       subjectRef: 'master'
 
   test-alphabase:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -337,7 +337,7 @@ jobs:
       subjectRef: 'main'
 
   test-clj-arrangement:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -345,7 +345,7 @@ jobs:
       subjectRef: 'main'
 
   test-clj-cbor:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -353,7 +353,7 @@ jobs:
       subjectRef: 'main'
 
   test-clj-pgp:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -361,7 +361,7 @@ jobs:
       subjectRef: 'main'
 
   test-aero:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -369,7 +369,7 @@ jobs:
       subjectRef: 'master'
 
   test-bidi:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -377,7 +377,7 @@ jobs:
       subjectRef: 'master'
 
   test-iota:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -385,7 +385,7 @@ jobs:
       subjectRef: 'master'
 
   test-pull:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -393,7 +393,7 @@ jobs:
       subjectRef: 'master'
 
   test-xtdb:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -401,7 +401,7 @@ jobs:
       subjectRef: '1.x'
 
   test-uniontypes:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -409,7 +409,7 @@ jobs:
       subjectRef: 'master'
 
   test-jsonista:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -417,7 +417,7 @@ jobs:
       subjectRef: 'master'
 
   test-potpuri:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
      clojureRepo: ${{ inputs.clojureRepo }}
      clojureRef: ${{ inputs.clojureRef }}
@@ -425,7 +425,7 @@ jobs:
      subjectRef: 'master'
 
   test-ring-http-response:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -433,7 +433,7 @@ jobs:
       subjectRef: 'master'
 
   test-schema-tools:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -441,7 +441,7 @@ jobs:
       subjectRef: 'master'
 
   test-spec-tools:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -449,7 +449,7 @@ jobs:
       subjectRef: 'master'
 
   test-clj-stacktraces:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -457,7 +457,7 @@ jobs:
       subjectRef: 'master'
 
   test-bencode:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -465,7 +465,7 @@ jobs:
       subjectRef: 'master'
 
   test-state-flow:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -473,7 +473,7 @@ jobs:
       subjectRef: 'master'
 
   test-faker:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -481,7 +481,7 @@ jobs:
       subjectRef: 'master'
 
   test-plumbing:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -489,7 +489,7 @@ jobs:
       subjectRef: 'master'
 
   test-schema:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -497,7 +497,7 @@ jobs:
       subjectRef: 'master'
 
   test-schema-generators:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -505,7 +505,7 @@ jobs:
       subjectRef: 'master'
 
   test-humane-test-output:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -513,7 +513,7 @@ jobs:
       subjectRef: 'master'
 
   test-asami:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -521,7 +521,7 @@ jobs:
       subjectRef: 'master'
 
   test-defexception:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -529,7 +529,7 @@ jobs:
       subjectRef: 'master'
 
   test-proxy-plus:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -537,7 +537,7 @@ jobs:
       subjectRef: 'master'
 
   test-specter:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -545,7 +545,7 @@ jobs:
       subjectRef: 'master'
 
   test-vector-backed-sorted-map:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -553,7 +553,7 @@ jobs:
       subjectRef: 'main'
 
   test-ring-anti-forgery:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -561,7 +561,7 @@ jobs:
       subjectRef: 'master'
 
   test-ring-defaults:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -569,7 +569,7 @@ jobs:
       subjectRef: 'master'
 
   test-ring-headers:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -577,7 +577,7 @@ jobs:
       subjectRef: 'master'
 
   test-ring-mock:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -585,7 +585,7 @@ jobs:
       subjectRef: 'master'
 
   test-ring-ssl:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -593,7 +593,7 @@ jobs:
       subjectRef: 'master'
 
   test-component:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -601,7 +601,7 @@ jobs:
       subjectRef: 'master'
 
   test-dependency:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -609,7 +609,7 @@ jobs:
       subjectRef: 'master'
 
   test-encore:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -617,7 +617,7 @@ jobs:
       subjectRef: 'master'
 
   test-tempura:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -625,7 +625,7 @@ jobs:
       subjectRef: 'master'
 
   test-tengen:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -633,7 +633,7 @@ jobs:
       subjectRef: 'master'
 
   test-touchstone:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -641,7 +641,7 @@ jobs:
       subjectRef: 'master'
 
   test-tower:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -649,7 +649,7 @@ jobs:
       subjectRef: 'master'
 
   test-truss:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -657,7 +657,7 @@ jobs:
       subjectRef: 'master'
 
   test-tufte:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -665,7 +665,7 @@ jobs:
       subjectRef: 'master'
 
   test-compact-uuids:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -673,7 +673,7 @@ jobs:
       subjectRef: 'master'
 
   test-tongue:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -681,7 +681,7 @@ jobs:
       subjectRef: 'master'
 
   test-versioneer:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -689,7 +689,7 @@ jobs:
       subjectRef: 'master'
 
   test-ataraxy:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -697,7 +697,7 @@ jobs:
       subjectRef: 'master'
 
   test-clout:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -705,7 +705,7 @@ jobs:
       subjectRef: 'master'
 
   test-compojure:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -713,7 +713,7 @@ jobs:
       subjectRef: 'master'
 
   test-crypto-equality:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -721,7 +721,7 @@ jobs:
       subjectRef: 'master'
 
   test-crypto-password:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -729,7 +729,7 @@ jobs:
       subjectRef: 'master'
 
   test-crypto-random:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -737,7 +737,7 @@ jobs:
       subjectRef: 'master'
 
   test-eclair:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -745,7 +745,7 @@ jobs:
       subjectRef: 'master'
 
   test-euclidean:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -753,7 +753,7 @@ jobs:
       subjectRef: 'master'
 
   test-haslett:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -761,7 +761,7 @@ jobs:
       subjectRef: 'master'
 
   test-hiccup:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -769,7 +769,7 @@ jobs:
       subjectRef: 'master'
 
   test-integrant:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -777,7 +777,7 @@ jobs:
       subjectRef: 'master'
 
   test-medley:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -785,7 +785,7 @@ jobs:
       subjectRef: 'master'
 
   test-meta-merge:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -793,7 +793,7 @@ jobs:
       subjectRef: 'master'
 
   test-ns-tracker:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -801,7 +801,7 @@ jobs:
       subjectRef: 'master'
 
   test-progrock:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -809,7 +809,7 @@ jobs:
       subjectRef: 'master'
 
   test-ring-oauth2:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -817,7 +817,7 @@ jobs:
       subjectRef: 'master'
 
   test-snowball-stemmer:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -825,7 +825,7 @@ jobs:
       subjectRef: 'master'
 
   test-clj-rss:
-     uses: ./.github/workflows/test-lein-repo.yml
+     uses: ./.github/workflows/lein-test.yml
      with:
        clojureRepo: ${{ inputs.clojureRepo }}
        clojureRef: ${{ inputs.clojureRef }}
@@ -833,7 +833,7 @@ jobs:
        subjectRef: 'master'
 
   test-config:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -841,7 +841,7 @@ jobs:
       subjectRef: 'master'
 
   test-sleight:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -849,7 +849,7 @@ jobs:
       subjectRef: 'master'
 
   test-runner:
-    uses: ./.github/workflows/test-deps-repo.yml
+    uses: ./.github/workflows/deps-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -859,7 +859,7 @@ jobs:
       testCmd: '-M:test'
 
   test-maestro:
-    uses: ./.github/workflows/test-deps-repo.yml
+    uses: ./.github/workflows/deps-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -869,7 +869,7 @@ jobs:
       testCmd: '-M:test'
 
   test-pomegranate:
-    uses: ./.github/workflows/test-deps-repo.yml
+    uses: ./.github/workflows/deps-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -879,7 +879,7 @@ jobs:
       testCmd: '-M:test'
 
   test-honeysql:
-    uses: ./.github/workflows/test-deps-repo.yml
+    uses: ./.github/workflows/deps-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -889,7 +889,7 @@ jobs:
       testCmd: '-M:test:runner'
 
   test-nippy:
-    uses: ./.github/workflows/test-lein-repo.yml
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
@@ -897,7 +897,7 @@ jobs:
       subjectRef: 'master'
 
   test-scicloj-metamorph-ml:
-    uses: ./.github/workflows/test-deps-repo.yml
+    uses: ./.github/workflows/deps-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}

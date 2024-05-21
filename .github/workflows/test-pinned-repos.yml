@@ -14,7 +14,7 @@ on:
 
 jobs:
   test-clojure-lsp:
-    uses: ./.github/workflows/test-deps-repo.yml
+    uses: ./.github/workflows/deps-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
