@@ -20,3 +20,7 @@ Required inputs for all actions are the same.
 test.regression was inspired by:
   * [core_regression](https://github.com/NoahTheDuke/core_regression) by [noahtheduke](https://github.com/NoahTheDuke)
   * [cljs-oss](https://github.com/cljs-oss/canary) by [darwin](https://github.com/darwin)
+
+## Copyright and License
+
+Copyright (c) Jarrod Taylor, Rich Hickey, and contributors. All rights reserved. The use and distribution terms for this software are covered by the Eclipse Public License 1.0 (https://opensource.org/license/epl-1-0/) witch can be found in the file LICENSE at the root of this distribution. By using this software in any fashion, you are agreeing to be bound by the terms of this license. You must not remove this notice, or any other, from this software.
