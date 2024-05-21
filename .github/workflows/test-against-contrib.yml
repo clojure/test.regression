@@ -62,20 +62,21 @@ jobs:
       subjectRepo: 'clojure/core.memoize'
       subjectRef: 'master'
 
-  test-core-rrb-vector:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/core.rrb-vector'
-      subjectRef: 'master'
+## Uses Nashorn for testing, not available in newer JDKs
+#  test-core-rrb-vector:
+#    uses: ./.github/workflows/mvn-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'clojure/core.rrb-vector'
+#      subjectRef: 'master'
 
   test-data-avl:
     uses: ./.github/workflows/mvn-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/core.data.avl'
+      subjectRepo: 'clojure/data.avl'
       subjectRef: 'master'
 
   test-data-csv:
@@ -126,13 +127,14 @@ jobs:
       subjectRepo: 'clojure/data.priority-map'
       subjectRef: 'master'
 
-  test-data-xml:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/data.xml'
-      subjectRef: 'master'
+## Uses Nashorn for testing, not available in newer JDKs
+#  test-data-xml:
+#    uses: ./.github/workflows/mvn-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'clojure/data.xml'
+#      subjectRef: 'master'
 
   test-data-zip:
     uses: ./.github/workflows/mvn-test.yml
@@ -236,14 +238,6 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojure/tools.deps'
-      subjectRef: 'master'
-
-  test-tools-deps-cli:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/tools.deps.cli'
       subjectRef: 'master'
 
   test-tools-gitlibs:
