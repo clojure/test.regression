@@ -951,21 +951,23 @@ jobs:
       testDir: './lib'
       testCmd: '-M:test'
 
-  test-finagle-clojure:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'finagle/finagle-clojure'
-      subjectRef: 'master'
+# Can't find finagle-clojure artifacts
+#  test-finagle-clojure:
+#    uses: ./.github/workflows/lein-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'finagle/finagle-clojure'
+#      subjectRef: 'master'
 
-  test-incomplete:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'nrepl/incomplete'
-      subjectRef: 'master'
+# Repo not downloading
+#  test-incomplete:
+#    uses: ./.github/workflows/lein-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'nrepl/incomplete'
+#      subjectRef: 'master'
 
 # Requires prep phase to run
 #  test-pedestal:
