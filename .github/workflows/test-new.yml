@@ -13,16 +13,6 @@ on:
         default: 'master'
 
 jobs:
-
-  test-riddley:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'ztellman/riddley'
-      subjectRef: 'master'
-      javaVersion: '["8"]'
-
   test-pedestal:
     uses: ./.github/workflows/deps-test.yml
     with:
