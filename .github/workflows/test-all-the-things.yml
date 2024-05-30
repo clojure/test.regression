@@ -560,6 +560,15 @@ jobs:
       subjectRepo: 'redplanetlabs/vector-backed-sorted-map'
       subjectRef: 'main'
 
+# Fails on Java 8
+#  test-ring-core:
+#    uses: ./.github/workflows/lein-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'ring-clojure/ring'
+#      subjectRef: 'master'
+
   test-ring-anti-forgery:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -679,6 +688,15 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/truss'
       subjectRef: 'master'
+
+# Tests fail
+#  test-carmine:
+#    uses: ./.github/workflows/lein-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'taoensso/carmine'
+#      subjectRef: 'master'
 
   test-tufte:
     uses: ./.github/workflows/lein-test.yml
@@ -933,14 +951,6 @@ jobs:
       testDir: './lib'
       testCmd: '-M:test'
 
-  test-colorize:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'ibdknox/colorize'
-      subjectRef: 'master'
-
   test-finagle-clojure:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -957,23 +967,16 @@ jobs:
       subjectRepo: 'nrepl/incomplete'
       subjectRef: 'master'
 
-  test-riddley:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'ztellman/riddley'
-      subjectRef: 'master'
-
-  test-pedestal:
-    uses: ./.github/workflows/deps-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'pedestal/pedestal'
-      subjectRef: 'master'
-      testDir: './test'
-      testCmd: '-X:test'
+# Requires prep phase to run
+#  test-pedestal:
+#    uses: ./.github/workflows/deps-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'pedestal/pedestal'
+#      subjectRef: 'master'
+#      testDir: './tests'
+#      testCmd: '-X:test'
 
   test-async-error:
     uses: ./.github/workflows/lein-test.yml
@@ -981,5 +984,66 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'alexanderkiel/async-error'
+      subjectRef: 'master'
+
+# Maven build uses release flag, not supported for Java 8
+#  test-fressian:
+#    uses: ./.github/workflows/mvn-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'Datomic/fressian'
+#      subjectRef: 'master'
+
+  test-slingshot:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'scgilardi/slingshot'
+      subjectRef: 'master'
+
+# Testx pass on Java 11, fail on Java 17
+#  test-clj-commons-iapetos:
+#    uses: ./.github/workflows/lein-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'clj-commons/iapetos'
+#      subjectRef: 'master'
+
+# Tests pass on Java 8, 17, 21 but fail on Java 11
+#  test-clj-commons-manifold:
+#    uses: ./.github/workflows/lein-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'clj-commons/manifold'
+#      subjectRef: 'master'
+
+# Checkouts fail
+#  test-pandect:
+#    uses: ./.github/workflows/lein-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'xsc/pandect'
+#      subjectRef: 'master'
+
+# Tests fail on at least Java 11 (need type hint for overloaded toArray)
+#  test-clj-jwt:
+#    uses: ./.github/workflows/lein-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      subjectRepo: 'liquidz/clj-jwt'
+#      subjectRef: 'master'
+
+  test-potemkin:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/potemkin'
       subjectRef: 'master'
 
