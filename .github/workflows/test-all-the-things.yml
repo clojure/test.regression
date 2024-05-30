@@ -464,6 +464,14 @@ jobs:
       subjectRepo: 'nrepl/bencode'
       subjectRef: 'master'
 
+  test-nrepl:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'nrepl/nrepl'
+      subjectRef: 'master'
+
   test-state-flow:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -646,6 +654,22 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/tower'
+      subjectRef: 'master'
+
+  test-timbre:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'taoensso/timbre'
+      subjectRef: 'master'
+
+  test-nippy:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'taoensso/nippy'
       subjectRef: 'master'
 
   test-truss:
@@ -888,14 +912,6 @@ jobs:
       testDir: '.'
       testCmd: '-M:test:runner'
 
-  test-nippy:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'taoensso/nippy'
-      subjectRef: 'master'
-
   test-scicloj-metamorph-ml:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -916,4 +932,54 @@ jobs:
       subjectRef: 'master'
       testDir: './lib'
       testCmd: '-M:test'
+
+  test-colorize:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'ibdknox/colorize'
+      subjectRef: 'master'
+
+  test-finagle-clojure:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'finagle/finagle-clojure'
+      subjectRef: 'master'
+
+  test-incomplete:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'nrepl/incomplete'
+      subjectRef: 'master'
+
+  test-riddley:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'ztellman/riddley'
+      subjectRef: 'master'
+
+  test-pedestal:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'pedestal/pedestal'
+      subjectRef: 'master'
+      testDir: './test'
+      testCmd: '-X:test'
+
+  test-async-error:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'alexanderkiel/async-error'
+      subjectRef: 'master'
 
