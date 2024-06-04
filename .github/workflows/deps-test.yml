@@ -20,6 +20,16 @@ on:
         description: "The branch, tag or SHA to checkout for subject repo"
         type: string
         required: true
+      SetUpDir:
+        description: "Directory setup invocation must be run from"
+        type: string
+        default: '.'
+        required: false
+      SetUpCmd:
+        description: "Command to invoke setup"
+        type: string
+        required: false
+        default: 'echo "No setup"'
       testDir:
         description: "Directory test invocation must be run from"
         type: string
@@ -86,6 +96,12 @@ jobs:
           repository: ${{ inputs.subjectRepo }}
           ref: ${{ inputs.subjectRef }}
           path: 'subject-source'
+
+      - name: Run Setup
+        run: |
+          cd /home/runner/work/test.regression/test.regression/subject-source
+          cd ${{ inputs.setUpDir }}
+          ${{ inputs.setUpCmd }}
 
       - name: Run Tests
         run: |

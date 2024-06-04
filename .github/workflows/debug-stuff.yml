@@ -64,3 +64,15 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'xsc/pandect'
       subjectRef: 'main'
+
+  test-pedestal:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'pedestal/pedestal'
+      subjectRef: 'master'
+      setUpDir: './service'
+      setUpCmd: 'clojure -X:deps:local prep'
+      testDir: './tests'
+      testCmd: '-X:test'
