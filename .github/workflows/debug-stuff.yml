@@ -13,10 +13,54 @@ on:
         default: 'master'
 
 jobs:
-  test-transit-clj:
-    uses: ./.github/workflows/test-mvn-repo.yml
+  test-money:
+    uses: ./.github/workflows/lein-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'cognitect/transit-clj'
+      subjectRepo: 'clojurewerkz/money'
+      subjectRef: 'main'
+      javaVersion: '["11", "17", "21"]'
+
+  test-cheshire:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'dakrone/cheshire'
       subjectRef: 'master'
+      javaVersion: '["8", "11", "17"]'
+
+  test-ring-core:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'ring-clojure/ring'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+
+  test-incomplete:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'nrepl/incomplete'
+      subjectRef: 'main'
+
+  test-fressian:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'Datomic/fressian'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+
+  test-pandect:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'xsc/pandect'
+      subjectRef: 'main'

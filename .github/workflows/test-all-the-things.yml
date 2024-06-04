@@ -967,7 +967,7 @@ jobs:
 #      clojureRepo: ${{ inputs.clojureRepo }}
 #      clojureRef: ${{ inputs.clojureRef }}
 #      subjectRepo: 'nrepl/incomplete'
-#      subjectRef: 'master'
+#      subjectRef: 'main'
 
 # Requires prep phase to run
 #  test-pedestal:
@@ -1030,7 +1030,7 @@ jobs:
 #      clojureRepo: ${{ inputs.clojureRepo }}
 #      clojureRef: ${{ inputs.clojureRef }}
 #      subjectRepo: 'xsc/pandect'
-#      subjectRef: 'master'
+#      subjectRef: 'main'
 
 # Tests fail on at least Java 11 (need type hint for overloaded toArray)
 #  test-clj-jwt:
