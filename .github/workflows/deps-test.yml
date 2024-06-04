@@ -101,6 +101,9 @@ jobs:
         run: |
           cd /home/runner/work/test.regression/test.regression/subject-source
           cd ${{ inputs.setUpDir }}
+          echo "---"
+          pwd
+          echo "---"
           ${{ inputs.setUpCmd }}
 
       - name: Run Tests
