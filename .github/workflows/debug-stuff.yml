@@ -72,7 +72,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'pedestal/pedestal'
       subjectRef: 'master'
-      setUpDir: './service'
+      setUpDir: './tests'
       setUpCmd: 'clojure -X:deps:local prep'
       testDir: './tests'
       testCmd: '-X:test'
