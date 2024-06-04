@@ -968,7 +968,11 @@ jobs:
       subjectRepo: 'nrepl/incomplete'
       subjectRef: 'main'
 
-# Requires prep phase to run
+# Prep phase does not successfully compile
+#  ./java/io/pedestal/websocket/FnEndpoint.java:17:
+#    error: cannot access jakarta.websocket.CloseReason
+#  import jakarta.websocket.CloseReason;
+#
 #  test-pedestal:
 #    uses: ./.github/workflows/deps-test.yml
 #    with:
@@ -976,6 +980,8 @@ jobs:
 #      clojureRef: ${{ inputs.clojureRef }}
 #      subjectRepo: 'pedestal/pedestal'
 #      subjectRef: 'master'
+#      setUpDir: './tests'
+#      setUpCmd: 'clojure -X:deps:local prep'
 #      testDir: './tests'
 #      testCmd: '-X:test'
 
