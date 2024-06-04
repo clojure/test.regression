@@ -189,14 +189,14 @@ jobs:
       subjectRepo: 'michaelklishin/chash'
       subjectRef: 'master'
 
-#  FAILS on Java 8
-#  test-money:
-#    uses: ./.github/workflows/lein-test.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'clojurewerkz/money'
-#      subjectRef: 'main'
+  test-money:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojurewerkz/money'
+      subjectRef: 'main'
+      javaVersion: '["11", "17", "21"]'
 
   test-propertied:
     uses: ./.github/workflows/lein-test.yml
@@ -255,14 +255,14 @@ jobs:
       subjectRepo: 'michaelklishin/validateur'
       subjectRef: 'master'
 
-# FAILS on java 21
-#  test-cheshire:
-#    uses: ./.github/workflows/lein-test.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'dakrone/cheshire'
-#      subjectRef: 'master'
+  test-cheshire:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'dakrone/cheshire'
+      subjectRef: 'master'
+      javaVersion: '["8", "11", "17"]'
 
   test-tigris:
     uses: ./.github/workflows/lein-test.yml
@@ -560,14 +560,14 @@ jobs:
       subjectRepo: 'redplanetlabs/vector-backed-sorted-map'
       subjectRef: 'main'
 
-# Fails on Java 8
-#  test-ring-core:
-#    uses: ./.github/workflows/lein-test.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'ring-clojure/ring'
-#      subjectRef: 'master'
+  test-ring-core:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'ring-clojure/ring'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
 
   test-ring-anti-forgery:
     uses: ./.github/workflows/lein-test.yml
@@ -960,14 +960,13 @@ jobs:
 #      subjectRepo: 'finagle/finagle-clojure'
 #      subjectRef: 'master'
 
-# Repo not downloading
-#  test-incomplete:
-#    uses: ./.github/workflows/lein-test.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'nrepl/incomplete'
-#      subjectRef: 'main'
+  test-incomplete:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'nrepl/incomplete'
+      subjectRef: 'main'
 
 # Requires prep phase to run
 #  test-pedestal:
@@ -988,14 +987,14 @@ jobs:
       subjectRepo: 'alexanderkiel/async-error'
       subjectRef: 'master'
 
-# Maven build uses release flag, not supported for Java 8
-#  test-fressian:
-#    uses: ./.github/workflows/mvn-test.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'Datomic/fressian'
-#      subjectRef: 'master'
+  test-fressian:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'Datomic/fressian'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
 
   test-slingshot:
     uses: ./.github/workflows/lein-test.yml
@@ -1023,14 +1022,13 @@ jobs:
 #      subjectRepo: 'clj-commons/manifold'
 #      subjectRef: 'master'
 
-# Checkouts fail
-#  test-pandect:
-#    uses: ./.github/workflows/lein-test.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'xsc/pandect'
-#      subjectRef: 'main'
+  test-pandect:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'xsc/pandect'
+      subjectRef: 'main'
 
 # Tests fail on at least Java 11 (need type hint for overloaded toArray)
 #  test-clj-jwt:
