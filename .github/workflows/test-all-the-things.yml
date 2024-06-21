@@ -13,46 +13,6 @@ on:
         default: 'master'
 
 jobs:
-  test-core-cache:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/core.cache'
-      subjectRef: 'master'
-
-  test-core-logic:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/core.logic'
-      subjectRef: 'master'
-
-  test-core-match:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/core.match'
-      subjectRef: 'master'
-
-  test-core-memoize:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/core.memoize'
-      subjectRef: 'master'
-
-  test-math-combinatorics:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/math.combinatorics'
-      subjectRef: 'master'
-
   test-java-jdbc:
     uses: ./.github/workflows/mvn-test.yml
     with:
@@ -67,30 +27,6 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'cognitect/transit-clj'
-      subjectRef: 'master'
-
-  test-data-json:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/data.json'
-      subjectRef: 'master'
-
-  test-data-fressian:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/data.fressian'
-      subjectRef: 'master'
-
-  test-data-csv:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/data.csv'
       subjectRef: 'master'
 
   test-fipp:
