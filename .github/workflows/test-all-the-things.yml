@@ -568,6 +568,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/encore'
       subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
 
   test-tempura:
     uses: ./.github/workflows/lein-test.yml
