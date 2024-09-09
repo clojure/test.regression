@@ -69,7 +69,7 @@ jobs:
       - name: Build Clojure from Source
         run: |
           cd clojure-source
-          mvn install -Dmaven.test.skip=true
+          mvn install -ntp -Dmaven.test.skip=true
 
       - name: Checkout Regression Test Source Code
         uses: actions/checkout@v4
