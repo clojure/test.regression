@@ -13,66 +13,34 @@ on:
         default: 'master'
 
 jobs:
-  test-money:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojurewerkz/money'
-      subjectRef: 'main'
-      javaVersion: '["11", "17", "21"]'
 
-  test-cheshire:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'dakrone/cheshire'
-      subjectRef: 'master'
-      javaVersion: '["8", "11", "17"]'
+  ## Uses bb to run tests unsure how to override clj version
+#  test-clj-yaml:
+#      uses: ./.github/workflows/deps-test.yml
+#      with:
+#        clojureRepo: ${{ inputs.clojureRepo }}
+#        clojureRef: ${{ inputs.clojureRef }}
+#        testCmd: '-M:test'
+#        testDir: '.'
+#        subjectRepo: 'clj-commons/clj-yaml'
+#        subjectRef: 'master'
+#        javaVersion: '["11", "17", "21"]'
+  ## CI Failing in repo
+#  test-durable-queue:
+#      uses: ./.github/workflows/lein-test.yml
+#      with:
+#        clojureRepo: ${{ inputs.clojureRepo }}
+#        clojureRef: ${{ inputs.clojureRef }}
+#        subjectRepo: 'clj-commons/durable-queue'
+#        subjectRef: 'master'
+        ## Uses xvfb
+#  test-seesaw:
+#      uses: ./.github/workflows/lein-test.yml
+#      with:
+#        clojureRepo: ${{ inputs.clojureRepo }}
+#        clojureRef: ${{ inputs.clojureRef }}
+#        preTest: 'export DISPLAY=:99.0 && sh -e /etc/init.d/xvfb start'
+#        testCmd: 'lein deps; lein javac; export DISPLAY=:99.0; ./lazytest.sh'
+#        subjectRepo: 'clj-commons/seesaw'
+#        subjectRef: 'master'
 
-  test-ring-core:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'ring-clojure/ring'
-      subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
-
-  test-incomplete:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'nrepl/incomplete'
-      subjectRef: 'main'
-
-  test-fressian:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'Datomic/fressian'
-      subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
-
-  test-pandect:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'xsc/pandect'
-      subjectRef: 'main'
-
-  test-pedestal:
-    uses: ./.github/workflows/deps-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'pedestal/pedestal'
-      subjectRef: 'master'
-      setUpDir: './tests'
-      setUpCmd: 'clojure -X:deps:local prep'
-      testDir: './tests'
-      testCmd: '-X:test'

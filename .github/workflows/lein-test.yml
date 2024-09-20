@@ -25,6 +25,11 @@ on:
         required: false
         default: '["8", "11", "17", "21"]'
         type: string
+      testCmd:
+        description: "Command to invoke test run"
+        type: string
+        required: false
+        default: 'lein test'
 
 jobs:
   test:
@@ -80,4 +85,4 @@ jobs:
           cd /home/runner/work/test.regression/test.regression/subject-source
           lein deps
           sed -i.bak "s/\(org.clojure\/clojure\ \"[0-9\.]*\"\)/org.clojure\/clojure \"${{ env.LATEST_CLJ_BUILD }}\"/g" project.clj
-          lein test
+          ${{ inputs.testCmd }}

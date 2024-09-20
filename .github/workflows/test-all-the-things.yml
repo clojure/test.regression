@@ -20,7 +20,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojure/java.jdbc'
       subjectRef: 'master'
-
   test-transit-clj:
     uses: ./.github/workflows/mvn-test.yml
     with:
@@ -28,7 +27,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'cognitect/transit-clj'
       subjectRef: 'master'
-
   test-fipp:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -36,7 +34,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'brandonbloom/fipp'
       subjectRef: 'master'
-
   test-less-awful-ssl:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -44,7 +41,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'aphyr/less-awful-ssl'
       subjectRef: 'master'
-
   test-backtick:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -52,7 +48,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'brandonbloom/backtick'
       subjectRef: 'master'
-
   test-clj-time:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -60,7 +55,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clj-time/clj-time'
       subjectRef: 'master'
-
   test-url:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -68,7 +62,6 @@ jobs:
       ClojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'cemerick/url'
       subjectRef: 'master'
-
   test-enlive:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -76,7 +69,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'cgrand/enlive'
       subjectRef: 'master'
-
   test-parsley:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -84,7 +76,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'cgrand/parsley'
       subjectRef: 'master'
-
   test-seqexp:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -92,7 +83,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'cgrand/seqexp'
       subjectRef: 'master'
-
   test-sjacket:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -100,7 +90,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'cgrand/sjacket'
       subjectRef: 'master'
-
   test-balagan:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -108,7 +97,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojurewerkz/balagan'
       subjectRef: 'master'
-
   test-buffy:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -116,7 +104,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojurewerkz/buffy'
       subjectRef: 'master'
-
   test-chash:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -124,7 +111,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'michaelklishin/chash'
       subjectRef: 'master'
-
   test-money:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -133,7 +119,6 @@ jobs:
       subjectRepo: 'clojurewerkz/money'
       subjectRef: 'main'
       javaVersion: '["11", "17", "21"]'
-
   test-propertied:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -141,7 +126,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'michaelklishin/propertied'
       subjectRef: 'master'
-
 # NOTE: Failing hardcoded date based test.
 #  test-quartzite:
 #    uses: ./.github/workflows/lein-test.yml
@@ -150,7 +134,6 @@ jobs:
 #      clojureRef: ${{ inputs.clojureRef }}
 #      subjectRepo: 'michaelklishin/quartzite'
 #      subjectRef: 'main'
-
   test-route-one:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -158,7 +141,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojurewerkz/route-one'
       subjectRef: 'master'
-
   test-scrypt:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -166,7 +148,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojurewerkz/scrypt'
       subjectRef: 'master'
-
   test-serialism:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -174,7 +155,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojurewerkz/serialism'
       subjectRef: 'master'
-
   test-support:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -182,7 +162,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojurewerkz/support'
       subjectRef: 'master'
-
   test-validateur:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -190,7 +169,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'michaelklishin/validateur'
       subjectRef: 'master'
-
   test-cheshire:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -199,7 +177,6 @@ jobs:
       subjectRepo: 'dakrone/cheshire'
       subjectRef: 'master'
       javaVersion: '["8", "11", "17"]'
-
   test-tigris:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -207,7 +184,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'dakrone/tigris'
       subjectRef: 'master'
-
   test-pathetic:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -215,7 +191,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'davidsantiago/pathetic'
       subjectRef: 'master'
-
   test-quoin:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -223,7 +198,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'davidsantiago/quoin'
       subjectRef: 'master'
-
   test-clj-diff:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -231,7 +205,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'droitfintech/clj-diff'
       subjectRef: 'master'
-
   test-flare:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -239,7 +212,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'duckyuck/flare'
       subjectRef: 'master'
-
   test-instaparse:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -247,7 +219,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'engelberg/instaparse'
       subjectRef: 'master'
-
   test-cats:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -255,7 +226,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'funcool/cats'
       subjectRef: 'master'
-
   test-bytebuffer:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -263,7 +233,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'geoffsalmon/bytebuffer'
       subjectRef: 'master'
-
   test-alphabase:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -271,7 +240,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/alphabase'
       subjectRef: 'main'
-
   test-clj-arrangement:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -279,7 +247,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/clj-arrangement'
       subjectRef: 'main'
-
   test-clj-cbor:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -287,7 +254,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/clj-cbor'
       subjectRef: 'main'
-
   test-clj-pgp:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -295,7 +261,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/clj-pgp'
       subjectRef: 'main'
-
   test-aero:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -303,7 +268,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'juxt/aero'
       subjectRef: 'master'
-
   test-bidi:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -311,7 +275,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'juxt/bidi'
       subjectRef: 'master'
-
   test-iota:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -319,7 +282,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'juxt/iota'
       subjectRef: 'master'
-
   test-pull:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -327,7 +289,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'juxt/pull'
       subjectRef: 'master'
-
   test-xtdb:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -335,7 +296,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'xtdb/xtdb'
       subjectRef: '1.x'
-
   test-uniontypes:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -343,7 +303,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'lambdaisland/uniontypes'
       subjectRef: 'master'
-
   test-jsonista:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -351,7 +310,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'metosin/jsonista'
       subjectRef: 'master'
-
   test-potpuri:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -359,7 +317,6 @@ jobs:
      clojureRef: ${{ inputs.clojureRef }}
      subjectRepo: 'metosin/potpuri'
      subjectRef: 'master'
-
   test-ring-http-response:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -367,7 +324,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'metosin/ring-http-response'
       subjectRef: 'master'
-
   test-schema-tools:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -375,7 +331,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'metosin/schema-tools'
       subjectRef: 'master'
-
   test-spec-tools:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -383,7 +338,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'metosin/spec-tools'
       subjectRef: 'master'
-
   test-clj-stacktraces:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -391,7 +345,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'mmcgrana/clj-stacktrace'
       subjectRef: 'master'
-
   test-bencode:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -399,7 +352,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'nrepl/bencode'
       subjectRef: 'master'
-
   test-nrepl:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -407,7 +359,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'nrepl/nrepl'
       subjectRef: 'master'
-
   test-state-flow:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -415,7 +366,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'nubank/state-flow'
       subjectRef: 'master'
-
   test-faker:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -423,7 +373,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'paraseba/faker'
       subjectRef: 'master'
-
   test-plumbing:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -431,7 +380,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'plumatic/plumbing'
       subjectRef: 'master'
-
   test-schema:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -439,7 +387,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'plumatic/schema'
       subjectRef: 'master'
-
   test-schema-generators:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -447,7 +394,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'plumatic/schema-generators'
       subjectRef: 'master'
-
   test-humane-test-output:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -455,7 +401,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'pjstadig/humane-test-output'
       subjectRef: 'master'
-
   test-asami:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -463,7 +408,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'quoll/asami'
       subjectRef: 'master'
-
   test-defexception:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -471,7 +415,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'redplanetlabs/defexception'
       subjectRef: 'master'
-
   test-proxy-plus:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -479,7 +422,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'redplanetlabs/proxy-plus'
       subjectRef: 'master'
-
   test-specter:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -487,7 +429,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'redplanetlabs/specter'
       subjectRef: 'master'
-
   test-vector-backed-sorted-map:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -495,7 +436,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'redplanetlabs/vector-backed-sorted-map'
       subjectRef: 'main'
-
   test-ring-core:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -504,7 +444,6 @@ jobs:
       subjectRepo: 'ring-clojure/ring'
       subjectRef: 'master'
       javaVersion: '["11", "17", "21"]'
-
   test-ring-anti-forgery:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -512,7 +451,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-anti-forgery'
       subjectRef: 'master'
-
   test-ring-defaults:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -520,7 +458,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-defaults'
       subjectRef: 'master'
-
   test-ring-headers:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -528,7 +465,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-headers'
       subjectRef: 'master'
-
   test-ring-mock:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -536,7 +472,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-mock'
       subjectRef: 'master'
-
   test-ring-ssl:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -544,7 +479,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-ssl'
       subjectRef: 'master'
-
   test-component:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -552,7 +486,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'stuartsierra/component'
       subjectRef: 'master'
-
   test-dependency:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -560,7 +493,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'stuartsierra/dependency'
       subjectRef: 'master'
-
   test-encore:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -569,7 +501,6 @@ jobs:
       subjectRepo: 'taoensso/encore'
       subjectRef: 'master'
       javaVersion: '["11", "17", "21"]'
-
   test-tempura:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -577,7 +508,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/tempura'
       subjectRef: 'master'
-
   test-tengen:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -585,7 +515,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/tengen'
       subjectRef: 'master'
-
   test-touchstone:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -593,7 +522,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/touchstone'
       subjectRef: 'master'
-
   test-tower:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -601,7 +529,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/tower'
       subjectRef: 'master'
-
   test-timbre:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -609,7 +536,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/timbre'
       subjectRef: 'master'
-
   test-nippy:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -617,7 +543,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/nippy'
       subjectRef: 'master'
-
   test-truss:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -625,7 +550,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/truss'
       subjectRef: 'master'
-
 # Tests fail
 #  test-carmine:
 #    uses: ./.github/workflows/lein-test.yml
@@ -634,7 +558,6 @@ jobs:
 #      clojureRef: ${{ inputs.clojureRef }}
 #      subjectRepo: 'taoensso/carmine'
 #      subjectRef: 'master'
-
   test-tufte:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -642,7 +565,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/tufte'
       subjectRef: 'master'
-
   test-compact-uuids:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -650,7 +572,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'tonsky/compact-uuids'
       subjectRef: 'master'
-
   test-tongue:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -658,7 +579,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'tonsky/tongue'
       subjectRef: 'master'
-
   test-versioneer:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -666,7 +586,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'trptcolin/versioneer'
       subjectRef: 'master'
-
   test-ataraxy:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -674,7 +593,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/ataraxy'
       subjectRef: 'master'
-
   test-clout:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -682,7 +600,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/clout'
       subjectRef: 'master'
-
   test-compojure:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -690,7 +607,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/compojure'
       subjectRef: 'master'
-
   test-crypto-equality:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -698,7 +614,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/crypto-equality'
       subjectRef: 'master'
-
   test-crypto-password:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -706,7 +621,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/crypto-password'
       subjectRef: 'master'
-
   test-crypto-random:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -714,7 +628,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/crypto-random'
       subjectRef: 'master'
-
   test-eclair:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -722,7 +635,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/eclair'
       subjectRef: 'master'
-
   test-euclidean:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -730,7 +642,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/euclidean'
       subjectRef: 'master'
-
   test-haslett:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -738,7 +649,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/haslett'
       subjectRef: 'master'
-
   test-hiccup:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -746,7 +656,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/hiccup'
       subjectRef: 'master'
-
   test-integrant:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -754,7 +663,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/integrant'
       subjectRef: 'master'
-
   test-medley:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -762,7 +670,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/medley'
       subjectRef: 'master'
-
   test-meta-merge:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -770,7 +677,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/meta-merge'
       subjectRef: 'master'
-
   test-ns-tracker:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -778,7 +684,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/ns-tracker'
       subjectRef: 'master'
-
   test-progrock:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -786,7 +691,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/progrock'
       subjectRef: 'master'
-
   test-ring-oauth2:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -794,7 +698,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/ring-oauth2'
       subjectRef: 'master'
-
   test-snowball-stemmer:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -802,7 +705,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'weavejester/snowball-stemmer'
       subjectRef: 'master'
-
   test-clj-rss:
      uses: ./.github/workflows/lein-test.yml
      with:
@@ -810,7 +712,6 @@ jobs:
        clojureRef: ${{ inputs.clojureRef }}
        subjectRepo: 'yogthos/clj-rss'
        subjectRef: 'master'
-
   test-config:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -818,7 +719,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'yogthos/config'
       subjectRef: 'master'
-
   test-sleight:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -826,7 +726,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ztellman/sleight'
       subjectRef: 'master'
-
   test-runner:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -836,7 +735,6 @@ jobs:
       subjectRef: 'master'
       testDir: '.'
       testCmd: '-M:test'
-
   test-maestro:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -846,7 +744,6 @@ jobs:
       subjectRef: 'main'
       testDir: '.'
       testCmd: '-M:test'
-
   test-pomegranate:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -856,7 +753,6 @@ jobs:
       subjectRef: 'master'
       testDir: '.'
       testCmd: '-M:test'
-
   test-honeysql:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -866,7 +762,6 @@ jobs:
       subjectRef: 'master'
       testDir: '.'
       testCmd: '-M:test:runner'
-
   test-scicloj-metamorph-ml:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -877,7 +772,6 @@ jobs:
       testDir: '.'
       testCmd: '-A:test -m kaocha.runner'
       javaVersion: '["11", "17", "21"]'
-
   test-clojure-lsp:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -887,7 +781,6 @@ jobs:
       subjectRef: 'master'
       testDir: './lib'
       testCmd: '-M:test'
-
 # Can't find finagle-clojure artifacts
 #  test-finagle-clojure:
 #    uses: ./.github/workflows/lein-test.yml
@@ -896,7 +789,6 @@ jobs:
 #      clojureRef: ${{ inputs.clojureRef }}
 #      subjectRepo: 'finagle/finagle-clojure'
 #      subjectRef: 'master'
-
   test-incomplete:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -904,7 +796,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'nrepl/incomplete'
       subjectRef: 'main'
-
 # Prep phase does not successfully compile
 #  ./java/io/pedestal/websocket/FnEndpoint.java:17:
 #    error: cannot access jakarta.websocket.CloseReason
@@ -921,7 +812,6 @@ jobs:
 #      setUpCmd: 'clojure -X:deps:local prep'
 #      testDir: './tests'
 #      testCmd: '-X:test'
-
   test-async-error:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -929,7 +819,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'alexanderkiel/async-error'
       subjectRef: 'master'
-
   test-fressian:
     uses: ./.github/workflows/mvn-test.yml
     with:
@@ -938,7 +827,6 @@ jobs:
       subjectRepo: 'Datomic/fressian'
       subjectRef: 'master'
       javaVersion: '["11", "17", "21"]'
-
   test-slingshot:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -946,25 +834,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'scgilardi/slingshot'
       subjectRef: 'master'
-
-# Testx pass on Java 11, fail on Java 17
-#  test-clj-commons-iapetos:
-#    uses: ./.github/workflows/lein-test.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'clj-commons/iapetos'
-#      subjectRef: 'master'
-
-# Tests pass on Java 8, 17, 21 but fail on Java 11
-#  test-clj-commons-manifold:
-#    uses: ./.github/workflows/lein-test.yml
-#    with:
-#      clojureRepo: ${{ inputs.clojureRepo }}
-#      clojureRef: ${{ inputs.clojureRef }}
-#      subjectRepo: 'clj-commons/manifold'
-#      subjectRef: 'master'
-
   test-pandect:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -972,7 +841,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'xsc/pandect'
       subjectRef: 'main'
-
 # Tests fail on at least Java 11 (need type hint for overloaded toArray)
 #  test-clj-jwt:
 #    uses: ./.github/workflows/lein-test.yml
@@ -981,7 +849,6 @@ jobs:
 #      clojureRef: ${{ inputs.clojureRef }}
 #      subjectRepo: 'liquidz/clj-jwt'
 #      subjectRef: 'master'
-
   test-potemkin:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -989,4 +856,623 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clj-commons/potemkin'
       subjectRef: 'master'
-
+  test-core-async:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/core.async'
+      subjectRef: 'master'
+  test-core-contracts:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/core.contracts'
+      subjectRef: 'master'
+  test-core-unify:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/core.unify'
+      subjectRef: 'master'
+  test-data-codec:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/data.codec'
+      subjectRef: 'master'
+  test-data-finger-tree:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/data.finger-tree'
+      subjectRef: 'master'
+  test-spec-alpha:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/spec.alpha'
+      subjectRef: 'master'
+  test-tools-deps-graph:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.deps.graph'
+      subjectRef: 'master'
+  test-tools-namespace:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.namespace'
+      subjectRef: 'master'
+  test-clojurescript:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:compiler.test:compiler.test.run'
+      testDir: '.'
+      subjectRepo: 'clojure/clojurescript'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+  test-spec-alpha2:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/spec-alpha2'
+      subjectRef: 'master'
+  test-byte-transforms:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/byte-transforms'
+      subjectRef: 'master'
+  test-camel-snake-kebab:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/camel-snake-kebab'
+      subjectRef: 'master'
+  test-byte-streams:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/byte-streams'
+      subjectRef: 'master'
+  test-citrus:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/citrus'
+      subjectRef: 'master'
+  test-claypoole:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/claypoole'
+      subjectRef: 'master'
+  test-digest:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/digest'
+      subjectRef: 'master'
+  test-gloss:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/gloss'
+      subjectRef: 'master'
+  test-hickory:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/hickory'
+      subjectRef: 'master'
+  test-humanize:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:test'
+      testDir: '.'
+      subjectRepo: 'clj-commons/humanize'
+      subjectRef: 'master'
+  test-kibit:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/kibit'
+      subjectRef: 'master'
+  test-ordered:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/ordered'
+      subjectRef: 'master'
+  test-primitive-math:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/primitive-math'
+      subjectRef: 'master'
+  test-ring-buffer:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/ring-buffer'
+      subjectRef: 'master'
+  test-tentacles:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/tentacles'
+      subjectRef: 'master'
+  test-pretty:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:test'
+      testDir: '.'
+      subjectRepo: 'clj-commons/pretty'
+      subjectRef: 'main'
+  test-rewrite-clj:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test-common:kaocha'
+      testDir: '.'
+      subjectRepo: 'clj-commons/rewrite-clj'
+      subjectRef: 'main'
+  test-dynaload:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:clj-test'
+      testDir: '.'
+      subjectRepo: 'borkdude/dynaload'
+      subjectRef: 'master'
+  test-xforms:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test:kaocha'
+      testDir: '.'
+      subjectRepo: 'cgrand/xforms'
+      subjectRef: 'master'
+  test-archimedes:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojurewerkz/archimedes'
+      subjectRef: 'master'
+  test-dom-top:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'aphyr/dom-top'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+  test-sweet-array:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test'
+      testDir: '.'
+      subjectRepo: 'athos/sweet-array'
+      subjectRef: 'main'
+  test-fern:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test'
+      testDir: '.'
+      subjectRepo: 'cognitect-labs/fern'
+      subjectRef: 'master'
+  test-vase:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'cognitect-labs/vase'
+      subjectRef: 'master'
+  test-buddy-auth:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:dev:test'
+      testDir: '.'
+      subjectRepo: 'funcool/buddy-auth'
+      subjectRef: 'master'
+  test-buddy-core:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:dev:test'
+      testDir: '.'
+      subjectRepo: 'funcool/buddy-core'
+      subjectRef: 'master'
+  test-core:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'duct-framework/core'
+      subjectRef: 'master'
+  test-buddy-sign:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:dev:test'
+      testDir: '.'
+      subjectRepo: 'funcool/buddy-sign'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+  test-cuerdas:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:dev:test'
+      testDir: '.'
+      subjectRepo: 'funcool/cuerdas'
+      subjectRef: 'master'
+  test-test-chuck:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'gfredericks/test.chuck'
+      subjectRef: 'master'
+  test-americano:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test:runner'
+      testDir: '.'
+      subjectRepo: 'igjoshua/americano'
+      subjectRef: 'master'
+  test-jinx:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:dev:test'
+      testDir: '.'
+      subjectRepo: 'juxt/jinx'
+      subjectRef: 'master'
+  test-reap:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:dev:test'
+      testDir: '.'
+      subjectRepo: 'juxt/reap'
+      subjectRef: 'master'
+  test-zprint:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:cljtest:test'
+      testDir: '.'
+      subjectRepo: 'kkinnear/zprint'
+      subjectRef: 'master'
+  test-li-clj-diff:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test -m kaocha.runner'
+      testDir: '.'
+      subjectRepo: 'lambdaisland/clj-diff'
+      subjectRef: 'master'
+  test-blocks:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/blocks'
+      subjectRef: 'main'
+  test-puget:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/puget'
+      subjectRef: 'main'
+  test-tick:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test-clj -m kaocha.runner'
+      testDir: '.'
+      subjectRepo: 'juxt/tick'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+  test-deep-diff2:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test -m kaocha.runner :clj'
+      testDir: '.'
+      subjectRepo: 'lambdaisland/deep-diff2'
+      subjectRef: 'main'
+  test-kaocha:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test -m kaocha.runner :unit'
+      testDir: '.'
+      subjectRepo: 'lambdaisland/kaocha'
+      subjectRef: 'main'
+  test-uri:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test -m kaocha.runner :clj'
+      testDir: '.'
+      subjectRepo: 'lambdaisland/uri'
+      subjectRef: 'master'
+  test-cascade:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test -m kaocha.runner :clj'
+      testDir: '.'
+      subjectRepo: 'lilactown/cascade'
+      subjectRef: 'main'
+  test-pyramid:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test -m kaocha.runner :clj'
+      testDir: '.'
+      subjectRepo: 'lilactown/pyramid'
+      subjectRef: 'main'
+  test-rewrite-indented:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:dev:test'
+      testDir: '.'
+      subjectRepo: 'liquidz/rewrite-indented'
+      subjectRef: 'main'
+  test-testdoc:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:dev:test'
+      testDir: '.'
+      subjectRepo: 'liquidz/testdoc'
+      subjectRef: 'main'
+  test-midje:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'marick/midje'
+      subjectRef: 'master'
+  test-suchwow:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'marick/suchwow'
+      subjectRef: 'master'
+  test-malli:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test -m kaocha.runner'
+      testDir: '.'
+      subjectRepo: 'metosin/malli'
+      subjectRef: 'master'
+  test-muuntaja:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'metosin/muuntaja'
+      subjectRef: 'master'
+  test-reitit:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: './scripts/test.sh clj'
+      subjectRepo: 'metosin/reitit'
+      subjectRef: 'master'
+  test-matcher-combinators:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:dev:clj-test:test-runner'
+      testDir: '.'
+      subjectRepo: 'nubank/matcher-combinators'
+      subjectRef: 'master'
+  test-pattern:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test:runner'
+      testDir: '.'
+      subjectRepo: 'pangloss/pattern'
+      subjectRef: 'main'
+  test-pure-conditioning:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test'
+      testDir: '.'
+      subjectRepo: 'pangloss/pure-conditioning'
+      subjectRef: 'master'
+  test-system-check:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'pangloss/system.check'
+      subjectRef: 'master'
+  test-ring-codec:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'ring-clojure/ring-codec'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+  test-next-jdbc:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:test'
+      testDir: '.'
+      subjectRepo: 'seancorfield/next-jdbc'
+      subjectRef: 'develop'
+      javaVersion: '["11", "17", "21"]'
+  test-timre:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'taoensso/timbre'
+      subjectRef: 'master'
+  test-lettercase:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'tobereplaced/lettercase'
+      subjectRef: 'master'
+  test-datascript:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:dev user/-test-main'
+      testDir: '.'
+      subjectRepo: 'tonsky/datascript'
+      subjectRef: 'master'
+  test-uberdeps:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test -m uberdeps.test'
+      testDir: '.'
+      subjectRepo: 'tonsky/uberdeps'
+      subjectRef: 'master'
+  test-lacinia:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:dev:test'
+      testDir: '.'
+      subjectRepo: 'walmartlabs/lacinia'
+      subjectRef: 'master'
+  test-ragtime:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: 'lein sub test'
+      subjectRepo: 'weavejester/ragtime'
+      subjectRef: 'master'
+  test-markdown-clj:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:test'
+      testDir: '.'
+      subjectRepo: 'yogthos/markdown-clj'
+      subjectRef: 'master'
+  test-selmer:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:dev:test'
+      testDir: '.'
+      subjectRepo: 'yogthos/selmer'
+      subjectRef: 'master'
+      javaVersion: '["21"]'
+  test-clj-radix:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'ztellman/clj-radix'
+      subjectRef: 'master'
+  test-virgil:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test'
+      testDir: '.'
+      subjectRepo: 'clj-commons/virgil'
+      subjectRef: 'master'
+  test-clj-commons-iapetos:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/iapetos'
+      subjectRef: 'master'
+  test-clj-commons-manifold:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/manifold'
+      subjectRef: 'master'
