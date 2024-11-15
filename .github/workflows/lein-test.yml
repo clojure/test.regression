@@ -23,7 +23,7 @@ on:
       javaVersion:
         description: 'Java matrix versions to use for the build'
         required: false
-        default: '["8", "11", "17", "21"]'
+        default: '["17", "21"]'
         type: string
       testCmd:
         description: "Command to invoke test run"
