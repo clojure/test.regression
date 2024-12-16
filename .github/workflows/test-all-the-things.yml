@@ -1389,10 +1389,3 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clj-commons/iapetos'
       subjectRef: 'master'
-  test-clj-commons-manifold:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clj-commons/manifold'
-      subjectRef: 'master'
