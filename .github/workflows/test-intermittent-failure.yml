@@ -1,0 +1,33 @@
+name: Test Intermittent Failures
+
+# Repositories found here were intermittently failing
+on:
+  workflow_dispatch:
+    inputs:
+      clojureRepo:
+        description: "Repository name with owner."
+        required: true
+        default: 'clojure/clojure'
+      clojureRef:
+        description: "The branch, tag or SHA to checkout"
+        required: true
+        default: 'master'
+
+jobs:
+  test-scicloj-metamorph-ml:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'scicloj/metamorph.ml'
+      subjectRef: 'main'
+      testDir: '.'
+      testCmd: '-A:test -m kaocha.runner'
+      javaVersion: '["11", "17", "21"]'
+  test-clj-commons-manifold:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clj-commons/manifold'
+      subjectRef: 'master'

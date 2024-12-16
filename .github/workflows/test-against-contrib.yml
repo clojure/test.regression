@@ -279,3 +279,94 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojure/tools.trace'
       subjectRef: 'master'
+
+  test-java-jdbc:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/java.jdbc'
+      subjectRef: 'master'
+
+  test-core-async:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/core.async'
+      subjectRef: 'master'
+
+  test-core-contracts:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/core.contracts'
+      subjectRef: 'master'
+
+  test-core-unify:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/core.unify'
+      subjectRef: 'master'
+
+  test-data-codec:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/data.codec'
+      subjectRef: 'master'
+
+  test-data-finger-tree:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/data.finger-tree'
+      subjectRef: 'master'
+
+  test-spec-alpha:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/spec.alpha'
+      subjectRef: 'master'
+
+  test-tools-deps-graph:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.deps.graph'
+      subjectRef: 'master'
+
+  test-tools-namespace:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/tools.namespace'
+      subjectRef: 'master'
+
+  test-clojurescript:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:compiler.test:compiler.test.run'
+      testDir: '.'
+      subjectRepo: 'clojure/clojurescript'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+
+  test-spec-alpha2:
+    uses: ./.github/workflows/mvn-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'clojure/spec-alpha2'
+      subjectRef: 'master'
