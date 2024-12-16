@@ -755,16 +755,6 @@ jobs:
       subjectRef: 'master'
       testDir: '.'
       testCmd: '-M:test:runner'
-  test-scicloj-metamorph-ml:
-    uses: ./.github/workflows/deps-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'scicloj/metamorph.ml'
-      subjectRef: 'main'
-      testDir: '.'
-      testCmd: '-A:test -m kaocha.runner'
-      javaVersion: '["11", "17", "21"]'
   test-clojure-lsp:
     uses: ./.github/workflows/deps-test.yml
     with:
