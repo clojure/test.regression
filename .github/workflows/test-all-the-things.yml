@@ -161,7 +161,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'michaelklishin/validateur'
-      subjectRef: 'master'
+      subjectRef: 'main'
   test-cheshire:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -227,10 +227,12 @@ jobs:
       subjectRepo: 'geoffsalmon/bytebuffer'
       subjectRef: 'master'
   test-alphabase:
-    uses: ./.github/workflows/lein-test.yml
+    uses: ./.github/workflows/deps-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:test'
+      testDir: '.'
       subjectRepo: 'greglook/alphabase'
       subjectRef: 'main'
   test-clj-arrangement:
@@ -436,7 +438,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-ring-anti-forgery:
     uses: ./.github/workflows/lein-test.yml
     with:
