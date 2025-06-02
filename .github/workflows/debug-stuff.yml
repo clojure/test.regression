@@ -48,12 +48,21 @@ jobs:
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      testCmd: '-X:test'
+      testCmd: '-M:test:runner'
       testDir: '.'
       subjectRepo: 'seancorfield/next-jdbc'
       subjectRef: 'develop'
-      javaVersion: '["21"]'
+      javaVersion: '["11", "17", "21"]'
 
+  test-ragtime:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: 'lein sub test'
+      subjectRepo: 'weavejester/ragtime'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
 
   ## Uses bb to run tests unsure how to override clj version
 #  test-clj-yaml:
