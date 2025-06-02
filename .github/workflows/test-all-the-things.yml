@@ -976,14 +976,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojurewerkz/archimedes'
       subjectRef: 'master'
-  test-dom-top:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'aphyr/dom-top'
-      subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
   test-sweet-array:
     uses: ./.github/workflows/deps-test.yml
     with:

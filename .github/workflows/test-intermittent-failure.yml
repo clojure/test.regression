@@ -50,3 +50,11 @@ jobs:
       testDir: '.'
       subjectRepo: 'greglook/alphabase'
       subjectRef: 'main'
+  test-dom-top:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'aphyr/dom-top'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
