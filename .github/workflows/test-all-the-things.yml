@@ -467,6 +467,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-mock'
       subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
   test-ring-ssl:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -1247,15 +1248,6 @@ jobs:
       testDir: '.'
       subjectRepo: 'nubank/matcher-combinators'
       subjectRef: 'master'
-  test-pattern:
-    uses: ./.github/workflows/deps-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      testCmd: '-M:test:runner'
-      testDir: '.'
-      subjectRepo: 'pangloss/pattern'
-      subjectRef: 'main'
   test-pure-conditioning:
     uses: ./.github/workflows/deps-test.yml
     with:

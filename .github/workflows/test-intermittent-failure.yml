@@ -31,3 +31,13 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clj-commons/manifold'
       subjectRef: 'master'
+  ## Appears to be missing test path under runner allies
+  test-pattern:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:test:runner'
+      testDir: '.'
+      subjectRepo: 'pangloss/pattern'
+      subjectRef: 'main'

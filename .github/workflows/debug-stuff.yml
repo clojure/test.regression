@@ -24,6 +24,37 @@ jobs:
       subjectRepo: 'greglook/alphabase'
       subjectRef: 'main'
 
+  test-ring-mock:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'ring-clojure/ring-mock'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+
+  test-reitit:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: './scripts/test.sh clj'
+      subjectRepo: 'metosin/reitit'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
+
+  test-next-jdbc:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:test'
+      testDir: '.'
+      subjectRepo: 'seancorfield/next-jdbc'
+      subjectRef: 'develop'
+      javaVersion: '["21"]'
+
+
   ## Uses bb to run tests unsure how to override clj version
 #  test-clj-yaml:
 #      uses: ./.github/workflows/deps-test.yml
