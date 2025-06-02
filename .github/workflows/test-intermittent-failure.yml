@@ -41,3 +41,12 @@ jobs:
       testDir: '.'
       subjectRepo: 'pangloss/pattern'
       subjectRef: 'main'
+  test-alphabase:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:test'
+      testDir: '.'
+      subjectRepo: 'greglook/alphabase'
+      subjectRef: 'main'

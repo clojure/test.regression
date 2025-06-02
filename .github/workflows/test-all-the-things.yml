@@ -226,15 +226,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'geoffsalmon/bytebuffer'
       subjectRef: 'master'
-  test-alphabase:
-    uses: ./.github/workflows/deps-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      testCmd: '-X:test'
-      testDir: '.'
-      subjectRepo: 'greglook/alphabase'
-      subjectRef: 'main'
   test-clj-arrangement:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -1239,6 +1230,7 @@ jobs:
       testCmd: './scripts/test.sh clj'
       subjectRepo: 'metosin/reitit'
       subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
   test-matcher-combinators:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -1277,7 +1269,7 @@ jobs:
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      testCmd: '-X:test'
+      testCmd: '-M:test:runner'
       testDir: '.'
       subjectRepo: 'seancorfield/next-jdbc'
       subjectRef: 'develop'
@@ -1331,6 +1323,7 @@ jobs:
       testCmd: 'lein sub test'
       subjectRepo: 'weavejester/ragtime'
       subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
   test-markdown-clj:
     uses: ./.github/workflows/deps-test.yml
     with:
