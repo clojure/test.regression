@@ -19,7 +19,7 @@ jobs:
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      testCmd: '-M:test "$@"'
+      testCmd: '-M:test clj'
       testDir: '.'
       subjectRepo: 'greglook/alphabase'
       subjectRef: 'main'
