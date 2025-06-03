@@ -65,3 +65,10 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'plumatic/schema-generators'
       subjectRef: 'master'
+  test-blocks:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'greglook/blocks'
+      subjectRef: 'main'

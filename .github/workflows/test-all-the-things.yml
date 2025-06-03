@@ -1090,13 +1090,6 @@ jobs:
       testDir: '.'
       subjectRepo: 'lambdaisland/clj-diff'
       subjectRef: 'master'
-  test-blocks:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'greglook/blocks'
-      subjectRef: 'main'
   test-puget:
     uses: ./.github/workflows/lein-test.yml
     with:
