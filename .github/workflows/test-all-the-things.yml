@@ -373,13 +373,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'plumatic/schema'
       subjectRef: 'master'
-  test-schema-generators:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'plumatic/schema-generators'
-      subjectRef: 'master'
   test-humane-test-output:
     uses: ./.github/workflows/lein-test.yml
     with:

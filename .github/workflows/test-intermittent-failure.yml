@@ -58,3 +58,10 @@ jobs:
       subjectRepo: 'aphyr/dom-top'
       subjectRef: 'master'
       javaVersion: '["11", "17", "21"]'
+  test-schema-generators:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'plumatic/schema-generators'
+      subjectRef: 'master'
