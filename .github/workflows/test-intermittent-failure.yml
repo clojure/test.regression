@@ -72,3 +72,19 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/blocks'
       subjectRef: 'main'
+  test-nrepl:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'nrepl/nrepl'
+      subjectRef: 'master'
+  test-lacinia:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:dev:test'
+      testDir: '.'
+      subjectRepo: 'walmartlabs/lacinia'
+      subjectRef: 'master'

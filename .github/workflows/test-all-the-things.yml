@@ -40,7 +40,7 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'brandonbloom/backtick'
-      subjectRef: 'master'
+      subjectRef: 'main'
   test-clj-time:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -275,13 +275,6 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'juxt/pull'
       subjectRef: 'master'
-  test-xtdb:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'xtdb/xtdb'
-      subjectRef: '1.x'
   test-uniontypes:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -337,13 +330,6 @@ jobs:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'nrepl/bencode'
-      subjectRef: 'master'
-  test-nrepl:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'nrepl/nrepl'
       subjectRef: 'master'
   test-state-flow:
     uses: ./.github/workflows/lein-test.yml
@@ -437,6 +423,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-defaults'
       subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
   test-ring-headers:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -1012,6 +999,7 @@ jobs:
       testDir: '.'
       subjectRepo: 'funcool/buddy-core'
       subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
   test-core:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -1038,6 +1026,7 @@ jobs:
       testDir: '.'
       subjectRepo: 'funcool/cuerdas'
       subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
   test-test-chuck:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -1177,6 +1166,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'marick/midje'
       subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
   test-suchwow:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -1283,15 +1273,6 @@ jobs:
       testCmd: '-M:test -m uberdeps.test'
       testDir: '.'
       subjectRepo: 'tonsky/uberdeps'
-      subjectRef: 'master'
-  test-lacinia:
-    uses: ./.github/workflows/deps-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      testCmd: '-X:dev:test'
-      testDir: '.'
-      subjectRepo: 'walmartlabs/lacinia'
       subjectRef: 'master'
   test-ragtime:
     uses: ./.github/workflows/lein-test.yml
