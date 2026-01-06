@@ -88,3 +88,11 @@ jobs:
       testDir: '.'
       subjectRepo: 'walmartlabs/lacinia'
       subjectRef: 'master'
+  test-midje:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'marick/midje'
+      subjectRef: 'master'
+      javaVersion: '["11", "17", "21"]'
