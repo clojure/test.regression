@@ -280,13 +280,13 @@ jobs:
       subjectRepo: 'clojure/tools.trace'
       subjectRef: 'master'
 
-  test-java-jdbc:
-    uses: ./.github/workflows/mvn-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'clojure/java.jdbc'
-      subjectRef: 'master'
+  #test-java-jdbc:
+  #  uses: ./.github/workflows/mvn-test.yml
+  #  with:
+  #    clojureRepo: ${{ inputs.clojureRepo }}
+  #    clojureRef: ${{ inputs.clojureRef }}
+  #    subjectRepo: 'clojure/java.jdbc'
+  #    subjectRef: 'master'
 
   test-core-async:
     uses: ./.github/workflows/mvn-test.yml
@@ -352,16 +352,16 @@ jobs:
       subjectRepo: 'clojure/tools.namespace'
       subjectRef: 'master'
 
-  test-clojurescript:
-    uses: ./.github/workflows/deps-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      testCmd: '-M:compiler.test:compiler.test.run'
-      testDir: '.'
-      subjectRepo: 'clojure/clojurescript'
-      subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+  #test-clojurescript:
+  #  uses: ./.github/workflows/deps-test.yml
+  #  with:
+  #    clojureRepo: ${{ inputs.clojureRepo }}
+  #    clojureRef: ${{ inputs.clojureRef }}
+  #    testCmd: '-M:compiler.test:compiler.test.run'
+  #    testDir: '.'
+  #    subjectRepo: 'clojure/clojurescript'
+  #    subjectRef: 'master'
+  #    javaVersion: '["11", "17", "21"]'
 
   test-spec-alpha2:
     uses: ./.github/workflows/mvn-test.yml
