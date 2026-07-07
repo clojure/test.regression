@@ -111,7 +111,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojurewerkz/money'
       subjectRef: 'main'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-propertied:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -169,7 +169,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'dakrone/cheshire'
       subjectRef: 'master'
-      javaVersion: '["8", "11", "17"]'
+      javaVersion: '["17"]'
   test-tigris:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -423,7 +423,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-defaults'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-ring-headers:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -438,7 +438,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-mock'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-ring-ssl:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -467,7 +467,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'taoensso/encore'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-tempura:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -783,7 +783,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'Datomic/fressian'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-slingshot:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -999,7 +999,7 @@ jobs:
       testDir: '.'
       subjectRepo: 'funcool/buddy-core'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-core:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -1016,7 +1016,7 @@ jobs:
       testDir: '.'
       subjectRepo: 'funcool/buddy-sign'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-cuerdas:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -1026,7 +1026,7 @@ jobs:
       testDir: '.'
       subjectRepo: 'funcool/cuerdas'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-test-chuck:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -1095,7 +1095,7 @@ jobs:
       testDir: '.'
       subjectRepo: 'juxt/tick'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-deep-diff2:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -1190,7 +1190,7 @@ jobs:
       testCmd: './scripts/test.sh clj'
       subjectRepo: 'metosin/reitit'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-matcher-combinators:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -1223,7 +1223,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'ring-clojure/ring-codec'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-next-jdbc:
     uses: ./.github/workflows/deps-test.yml
     with:
@@ -1233,7 +1233,7 @@ jobs:
       testDir: '.'
       subjectRepo: 'seancorfield/next-jdbc'
       subjectRef: 'develop'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-timre:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -1274,7 +1274,7 @@ jobs:
       testCmd: 'lein sub test'
       subjectRepo: 'weavejester/ragtime'
       subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
+      javaVersion: '["17", "21"]'
   test-markdown-clj:
     uses: ./.github/workflows/deps-test.yml
     with:
