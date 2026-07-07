@@ -711,6 +711,7 @@ jobs:
       subjectRef: 'main'
       testDir: '.'
       testCmd: '-M:test'
+      javaVersion: '["17", "21"]'
   test-pomegranate:
     uses: ./.github/workflows/deps-test.yml
     with:
