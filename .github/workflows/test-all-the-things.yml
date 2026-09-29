@@ -890,7 +890,7 @@ jobs:
       subjectRepo: 'clj-commons/kibit'
       subjectRef: 'master'
   test-ordered:
-    uses: ./.github/workflows/lein-test.yml
+    uses: ./.github/workflows/deps-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
