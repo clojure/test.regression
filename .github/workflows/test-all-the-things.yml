@@ -212,6 +212,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'engelberg/instaparse'
       subjectRef: 'master'
+# NOTE: Failing in 1.13 due to a bad destructuring :or, issue filed
   test-cats:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -282,6 +283,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'lambdaisland/uniontypes'
       subjectRef: 'master'
+# NOTE: Failing in 1.13 due to hardcoded map ordering of cheshire tests
   test-jsonista:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -310,6 +312,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'metosin/schema-tools'
       subjectRef: 'master'
+# Failing in 1.13 due to bad reliance on merge args from s/merge s/or
   test-spec-tools:
     uses: ./.github/workflows/lein-test.yml
     with:
@@ -891,6 +894,8 @@ jobs:
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
+      testCmd: "-M:test-common:clj-test-runner"
+      testDir: '.'
       subjectRepo: 'clj-commons/ordered'
       subjectRef: 'master'
   test-primitive-math:
@@ -1183,15 +1188,16 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'metosin/muuntaja'
       subjectRef: 'master'
-  test-reitit:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      testCmd: './scripts/test.sh clj'
-      subjectRepo: 'metosin/reitit'
-      subjectRef: 'master'
-      javaVersion: '["17", "21"]'
+# Needs help to fix test command
+#  test-reitit:
+#    uses: ./.github/workflows/lein-test.yml
+#    with:
+#      clojureRepo: ${{ inputs.clojureRepo }}
+#      clojureRef: ${{ inputs.clojureRef }}
+#      testCmd: './scripts/test.sh clj'
+#      subjectRepo: 'metosin/reitit'
+#      subjectRef: 'master'
+#      javaVersion: '["17", "21"]'
   test-matcher-combinators:
     uses: ./.github/workflows/deps-test.yml
     with:
