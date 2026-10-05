@@ -27,3 +27,11 @@ jobs:
         "(require 'eftest.runner)
         (let [{:keys [fail error]} (eftest.runner/run-tests (eftest.runner/find-tests \"test\"))]
           (System/exit (if (zero? (+ fail error)) 0 1)))"
+
+  test-clojure-test-suite:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'jank-lang/clojure-test-suite'
+      subjectRef: 'main'

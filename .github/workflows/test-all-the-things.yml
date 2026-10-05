@@ -248,6 +248,13 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'greglook/clj-pgp'
       subjectRef: 'main'
+  test-clojure-test-suite:
+    uses: ./.github/workflows/lein-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'jank-lang/clojure-test-suite'
+      subjectRef: 'main'
   test-aero:
     uses: ./.github/workflows/lein-test.yml
     with:
