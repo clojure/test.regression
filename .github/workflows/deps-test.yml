@@ -107,4 +107,4 @@ jobs:
         run: |
           cd /home/runner/work/test.regression/test.regression/subject-source
           cd ${{ inputs.testDir }}
-          clojure -Srepro -Sdeps '{:deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_CLJ_BUILD }}"}}}' ${{ inputs.testCmd }}
+          clojure -Srepro -Sdeps '{:aliases {:regression-clojure {:override-deps {org.clojure/clojure {:mvn/version "${{ env.LATEST_CLJ_BUILD }}"}}}}}' -A:regression-clojure ${{ inputs.testCmd }}

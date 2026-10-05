@@ -14,73 +14,16 @@ on:
 
 jobs:
 
-  test-ring-mock:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      subjectRepo: 'ring-clojure/ring-mock'
-      subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
-
-  test-reitit:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      testCmd: './scripts/test.sh clj'
-      subjectRepo: 'metosin/reitit'
-      subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
-
-  test-next-jdbc:
+  test-meander:
     uses: ./.github/workflows/deps-test.yml
     with:
       clojureRepo: ${{ inputs.clojureRepo }}
       clojureRef: ${{ inputs.clojureRef }}
-      testCmd: '-M:test:runner'
+      subjectRepo: 'noprompt/meander'
+      subjectRef: 'epsilon'
       testDir: '.'
-      subjectRepo: 'seancorfield/next-jdbc'
-      subjectRef: 'develop'
-      javaVersion: '["11", "17", "21"]'
-
-  test-ragtime:
-    uses: ./.github/workflows/lein-test.yml
-    with:
-      clojureRepo: ${{ inputs.clojureRepo }}
-      clojureRef: ${{ inputs.clojureRef }}
-      testCmd: 'lein sub test'
-      subjectRepo: 'weavejester/ragtime'
-      subjectRef: 'master'
-      javaVersion: '["11", "17", "21"]'
-
-  ## Uses bb to run tests unsure how to override clj version
-#  test-clj-yaml:
-#      uses: ./.github/workflows/deps-test.yml
-#      with:
-#        clojureRepo: ${{ inputs.clojureRepo }}
-#        clojureRef: ${{ inputs.clojureRef }}
-#        testCmd: '-M:test'
-#        testDir: '.'
-#        subjectRepo: 'clj-commons/clj-yaml'
-#        subjectRef: 'master'
-#        javaVersion: '["11", "17", "21"]'
-  ## CI Failing in repo
-#  test-durable-queue:
-#      uses: ./.github/workflows/lein-test.yml
-#      with:
-#        clojureRepo: ${{ inputs.clojureRepo }}
-#        clojureRef: ${{ inputs.clojureRef }}
-#        subjectRepo: 'clj-commons/durable-queue'
-#        subjectRef: 'master'
-        ## Uses xvfb
-#  test-seesaw:
-#      uses: ./.github/workflows/lein-test.yml
-#      with:
-#        clojureRepo: ${{ inputs.clojureRepo }}
-#        clojureRef: ${{ inputs.clojureRef }}
-#        preTest: 'export DISPLAY=:99.0 && sh -e /etc/init.d/xvfb start'
-#        testCmd: 'lein deps; lein javac; export DISPLAY=:99.0; ./lazytest.sh'
-#        subjectRepo: 'clj-commons/seesaw'
-#        subjectRef: 'master'
-
+      testCmd: >-
+        -M:cljs:test -e
+        "(require 'eftest.runner)
+        (let [{:keys [fail error]} (eftest.runner/run-tests (eftest.runner/find-tests \"test\"))]
+          (System/exit (if (zero? (+ fail error)) 0 1)))"

@@ -327,6 +327,20 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'mmcgrana/clj-stacktrace'
       subjectRef: 'master'
+  test-meander:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      subjectRepo: 'noprompt/meander'
+      subjectRef: 'epsilon'
+      testDir: '.'
+      # Eftest always returns a summary
+      testCmd: >-
+        -M:cljs:test -e
+        "(require 'eftest.runner)
+        (let [{:keys [fail error]} (eftest.runner/run-tests (eftest.runner/find-tests \"test\"))]
+          (System/exit (if (zero? (+ fail error)) 0 1)))"
   test-bencode:
     uses: ./.github/workflows/lein-test.yml
     with:
