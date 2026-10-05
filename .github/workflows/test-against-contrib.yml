@@ -29,7 +29,7 @@ jobs:
       clojureRef: ${{ inputs.clojureRef }}
       subjectRepo: 'clojure/algo.monads'
       subjectRef: 'master'
-  
+
   test-core-cache:
     uses: ./.github/workflows/mvn-test.yml
     with:
@@ -352,16 +352,16 @@ jobs:
       subjectRepo: 'clojure/tools.namespace'
       subjectRef: 'master'
 
-  #test-clojurescript:
-  #  uses: ./.github/workflows/deps-test.yml
-  #  with:
-  #    clojureRepo: ${{ inputs.clojureRepo }}
-  #    clojureRef: ${{ inputs.clojureRef }}
-  #    testCmd: '-M:compiler.test:compiler.test.run'
-  #    testDir: '.'
-  #    subjectRepo: 'clojure/clojurescript'
-  #    subjectRef: 'master'
-  #    javaVersion: '["11", "17", "21"]'
+  test-clojurescript:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-M:compiler.test:compiler.test.run'
+      testDir: '.'
+      subjectRepo: 'clojure/clojurescript'
+      subjectRef: 'master'
+      javaVersion: '["21", "25"]'
 
   test-spec-alpha2:
     uses: ./.github/workflows/mvn-test.yml
