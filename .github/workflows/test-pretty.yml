@@ -1,0 +1,24 @@
+name: Test pretty
+
+on:
+  workflow_dispatch:
+    inputs:
+      clojureRepo:
+        description: "Repository name with owner."
+        required: true
+        default: 'clojure/clojure'
+      clojureRef:
+        description: "The branch, tag or SHA to checkout"
+        required: true
+        default: 'master'
+
+jobs:
+  test-pretty:
+    uses: ./.github/workflows/deps-test.yml
+    with:
+      clojureRepo: ${{ inputs.clojureRepo }}
+      clojureRef: ${{ inputs.clojureRef }}
+      testCmd: '-X:test'
+      testDir: '.'
+      subjectRepo: 'clj-commons/pretty'
+      subjectRef: 'main'
